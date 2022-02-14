@@ -2,13 +2,13 @@ import { HtmlProps } from "next/dist/shared/lib/utils";
 import * as React from "react";
 
 const TextInput = (props: {
-  title: string;
-  label: string;
-  placeholder: string;
-  value: string;
-  type: string;
-  required:boolean;
-  hint: string;
+  title?: string;
+  label?: string;
+  placeholder?: string;
+  value?: string;
+  type?: string;
+  required?:boolean;
+  hint?: string;
 }) => {
   return (
     <div className="my-4 px-2 w-full flex flex-col border rounded-lg">

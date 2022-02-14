@@ -2,13 +2,13 @@ import { HtmlProps } from "next/dist/shared/lib/utils";
 import * as React from "react";
 
 const PasswordInput = (props: {
-  title: string;
-  label: string;
-  placeholder: string;
-  required:boolean;
-  value: string;
+  title?: string;
+  label?: string;
+  placeholder?: string;
+  required?:boolean;
+  value?: string;
   
-  hint: string;
+  hint?: string;
 }) => {
   return (
     <div className="my-4 px-2 flex flex-col border rounded-lg w-full">

@@ -2,17 +2,17 @@ import { HtmlProps } from "next/dist/shared/lib/utils";
 import * as React from "react";
 
 const DualInput = (props: {
-  first_label: string;
-  first_placeholder: string;
-  first_value: string;
-  first_type: string;
-  first_required: boolean;
-  second_label: string;
-  second_placeholder: string;
-  second_value: string;
-  second_type: string;
-  second_required: boolean;
-  hint: string;
+  first_label?: string;
+  first_placeholder?: string;
+  first_value?: string;
+  first_type?: string;
+  first_required?: boolean;
+  second_label?: string;
+  second_placeholder?: string;
+  second_value?: string;
+  second_type?: string;
+  second_required?: boolean;
+  hint?: string;
 }) => {
   return (
     <div className="my-4  flex flex-col w-full">

@@ -2,13 +2,13 @@ import { HtmlProps } from "next/dist/shared/lib/utils";
 import * as React from "react";
 
 const OtpInput = (props: {
-  title: string;
-  label: string;
-  placeholder: string;
-  value: string;
-  type: string;
-  required: boolean;
-  hint: string;
+  title?: string;
+  label?: string;
+  placeholder?: string;
+  value?: string;
+  type?: string;
+  required?: boolean;
+  hint?: string;
 }) => {
 
    

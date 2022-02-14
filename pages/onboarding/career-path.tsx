@@ -1,6 +1,7 @@
 import type { NextPage } from "next";
 import PrimaryButton from "@components/buttons/primary.button";
 import * as React from "react";
+import CourseCard from "@components/cards/courses.card";
 
 //onboard the user to pick a career
 const CareerPathPage: NextPage = () => {

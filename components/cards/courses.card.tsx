@@ -1,7 +1,7 @@
 import { HtmlProps } from "next/dist/shared/lib/utils";
 import * as React from "react";
 
-const CourseCard = (props: { title: string; onclick: any; type: any }) => {
+const CourseCard = (props: { title?: string; onclick?: any; type?: any;count:string; }) => {
   return (
     <div className="bg-gray-100 w-full">
       <div className="w-full flex flex-row justify-between">
