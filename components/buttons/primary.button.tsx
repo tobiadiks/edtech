@@ -1,6 +1,10 @@
 import * as React from "react";
 
-const PrimaryButton = (props: { title?: string; onclick?: any; type?: any }) => {
+const PrimaryButton = (props: {
+  title?: string;
+  onclick?: any;
+  type?: any;
+}) => {
   return (
     <button
       onClick={props.onclick}

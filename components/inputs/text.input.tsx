@@ -7,7 +7,8 @@ const TextInput = (props: {
   placeholder?: string;
   value?: string;
   type?: string;
-  required?:boolean;
+  required?: boolean;
+  onchange?: any;
   hint?: string;
 }) => {
   return (
@@ -20,6 +21,7 @@ const TextInput = (props: {
         type={props.type}
         value={props.value}
         placeholder={props.placeholder}
+        onChange={props.onchange}
         required={props.required}
       />
     </div>

@@ -1,13 +1,13 @@
-import { HtmlProps } from "next/dist/shared/lib/utils";
 import * as React from "react";
 
 const PasswordInput = (props: {
   title?: string;
   label?: string;
   placeholder?: string;
-  required?:boolean;
+  required?: boolean;
   value?: string;
-  
+  type?: string;
+  onchange?: any;
   hint?: string;
 }) => {
   return (
@@ -17,9 +17,10 @@ const PasswordInput = (props: {
       </label>
       <input
         className="focus:outline-none py-1 placeholder-gray-400 text-gray-900"
-        type={'text'}
+        type={props.type ? props.type : "password"}
         value={props.value}
         placeholder={props.placeholder}
+        onChange={props.onchange}
         required={props.required}
       />
     </div>

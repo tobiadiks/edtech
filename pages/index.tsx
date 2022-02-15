@@ -1,8 +1,9 @@
-import type { NextPage } from 'next'
-import Head from 'next/head'
+import type { NextPage } from "next";
+import Head from "next/head";
+import Link from "next/link";
 
 //the home page for a logged in user
-const HomePage:NextPage = () => {
+const HomePage: NextPage = () => {
   return (
     <div className="w-full min-h-screen flex justify-center align-middle">
       <Head>
@@ -12,22 +13,18 @@ const HomePage:NextPage = () => {
       </Head>
 
       <main className="mx-auto text-center">
-        <h1 className="">
-          Welcome Logged in user
-        </h1>
+        <h1 className="">Welcome</h1>
 
-        <p className="">
-          Get started by editing
-         
-        </p>
-
+        <Link href={"/auth/login"} passHref>
+          <p className="cursor-pointer hover:bg-slate-700">
+            Get started by editing
+          </p>
+        </Link>
       </main>
 
-      <footer className="">
-       
-      </footer>
+      <footer className=""></footer>
     </div>
-  )
-}
+  );
+};
 
-export default HomePage
+export default HomePage;

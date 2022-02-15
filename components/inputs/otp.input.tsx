@@ -10,47 +10,44 @@ const OtpInput = (props: {
   required?: boolean;
   hint?: string;
 }) => {
-
-   
-
   return (
     <div className="my-4 px-0 w-full flex flex-col ">
-      <div className="flex">
+      <div className="flex justify-even">
         <input
-          className="w-14 h-14 border-2  border-black rounded-lg text-center text-2xl font-medium"
-          min={0}
-          max={9}
-          type="number"
+          className="w-1/6 h-14 border-2  border-gray-400 focus:border-black rounded-lg text-center text-2xl font-medium"
+          minLength={1}
+          maxLength={1}
+          type="text"
         />
         <input
-          className="w-14 h-14 border-2  border-black rounded-lg text-center text-2xl font-medium"
-          min={0}
-          max={9}
-          type="number"
+          className="w-1/6 h-14 border-2  border-gray-400 focus:border-black  rounded-lg text-center text-2xl font-medium"
+          minLength={1}
+          maxLength={1}
+          type="text"
         />
         <input
-          className="w-14 h-14 border-2  border-black rounded-lg text-center text-2xl font-medium"
-          min={0}
-          max={9}
-          type="number"
+          className="w-1/6 h-14 border-2  border-gray-400 focus:border-black  rounded-lg text-center text-2xl font-medium"
+          minLength={1}
+          maxLength={1}
+          type="text"
         />
         <input
-          className="w-14 h-14 border-2  border-black rounded-lg text-center text-2xl font-medium"
-          min={0}
-          max={9}
-          type="number"
+          className="w-1/6 h-14 border-2  border-gray-400 focus:border-black  rounded-lg text-center text-2xl font-medium"
+          minLength={1}
+          maxLength={1}
+          type="text"
         />
         <input
-          className="w-14 h-14 border-2  border-black rounded-lg text-center text-2xl font-medium"
-          min={0}
-          max={9}
-          type="number"
+          className="w-1/6 h-14 border-2  border-gray-400 focus:border-black  rounded-lg text-center text-2xl font-medium"
+          minLength={1}
+          maxLength={1}
+          type="text"
         />
         <input
-          className="w-14 h-14 border-2  border-black rounded-lg text-center text-2xl font-medium"
-          min={0}
-          max={9}
-          type="number"
+          className="w-1/6 h-14 border-2  border-gray-400 focus:border-black  rounded-lg text-center text-2xl font-medium"
+          minLength={1}
+          maxLength={1}
+          type="text"
         />
       </div>
     </div>
