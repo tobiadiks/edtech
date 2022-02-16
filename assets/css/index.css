@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+
+@font-face {
+  font-family: Carbinet;
+  src: url("../fonts/cabinet-grotesk/CabinetGrotesk-Regular.woff")
+    format("woff");
+}
+
+@font-face {
+  font-family: Inter;
+  src: url("../fonts/inter/Inter-Regular.woff") format("woff");
+}
+
+@tailwind utilities;

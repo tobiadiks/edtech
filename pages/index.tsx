@@ -5,7 +5,7 @@ import Link from "next/link";
 //the home page for a logged in user
 const HomePage: NextPage = () => {
   return (
-    <div className="w-full min-h-screen flex justify-center align-middle">
+    <div className="w-full font-cabinet min-h-screen flex justify-center align-middle">
       <Head>
         <title>Dashboard</title>
         <meta name="description" content="your learnali dashboard" />

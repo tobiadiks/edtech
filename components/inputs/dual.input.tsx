@@ -15,7 +15,7 @@ const DualInput = (props: {
   hint?: string;
 }) => {
   return (
-    <div className="my-4  flex flex-col w-full">
+    <div className="my-4 font-inter flex flex-col w-full">
       <div className="flex flex-row">
         <div className="border-y rounded-l-lg border-l px-2 w-1/2">
           <label className="text-gray-400 py-1 font-medium text-sm">

@@ -12,7 +12,7 @@ const TextInput = (props: {
   hint?: string;
 }) => {
   return (
-    <div className="my-4 px-2 w-full flex flex-col border rounded-lg">
+    <div className="my-4 px-2 font-inter w-full flex flex-col border rounded-lg">
       <label className="text-gray-400 py-1 font-medium text-sm">
         {props.label}
       </label>

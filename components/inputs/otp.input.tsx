@@ -11,10 +11,10 @@ const OtpInput = (props: {
   hint?: string;
 }) => {
   return (
-    <div className="my-4 px-0 w-full flex flex-col ">
+    <div className="my-4 px-0 w-full font-inter flex flex-col ">
       <div className="flex justify-even">
         <input
-          className="w-1/6 h-14 border-2  border-gray-400 focus:border-black rounded-lg text-center text-2xl font-medium"
+          className="w-1/6 h-14 border-2  border-gray-400 focus:border-black  rounded-lg text-center text-2xl font-medium"
           minLength={1}
           maxLength={1}
           type="text"

@@ -11,15 +11,15 @@ import { useRouter } from "next/router";
 const SignUpPage: NextPage = () => {
   const route = useRouter();
   return (
-    <div className="w-full min-h-screen flex flex-col my-8 md:my-11 justify-center align-middle px-4 md:px-6">
+    <div className="w-full font-inter min-h-screen flex flex-col my-8 md:my-11 justify-center align-middle px-4 md:px-6">
       <div className="w-full">
         <Link href={"/"} passHref>
-          <div className="cursor-pointer text-center w-full md:w-1/3 mx-auto text-lg font-medium">
+          <div className="cursor-pointer text-center w-full md:w-1/2 lg:w-1/3 mx-auto text-lg font-bold">
             learnali.
           </div>
         </Link>
 
-        <div className="flex w-full md:w-1/3 my-6 font-medium mx-auto justify-between">
+        <div className="flex w-full md:w-1/2 lg:w-1/3 my-6 font-medium mx-auto justify-between">
           <Link href={"/auth/signup"} passHref>
             <div className="border-y border-l px-2 py-4 rounded-l-lg text-center w-1/2 cursor-pointer">
               Join Learnali
@@ -31,12 +31,12 @@ const SignUpPage: NextPage = () => {
             </div>
           </Link>
         </div>
-        <div className=" text-center w-full md:w-1/3 mx-auto font-medium">
+        <div className=" text-center w-full md:w-1/2 lg:w-1/3 mx-auto font-medium">
           Fill in your correct detail
         </div>
       </div>
 
-      <form className="w-full md:w-1/3 my-6 mx-auto">
+      <form className="w-full md:w-1/2 lg:w-1/3 my-6 mx-auto">
         <DualInput
           first_label="First name"
           second_label="Last Name"

@@ -11,7 +11,7 @@ const PasswordInput = (props: {
   hint?: string;
 }) => {
   return (
-    <div className="my-4 px-2 flex flex-col border rounded-lg w-full">
+    <div className="my-4 px-2 font-inter flex flex-col border rounded-lg w-full">
       <label className="text-gray-400 py-1 font-medium text-sm">
         {props.label}
       </label>
