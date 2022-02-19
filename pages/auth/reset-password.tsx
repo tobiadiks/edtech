@@ -8,21 +8,29 @@ import DualInput from "@components/inputs/dual.input";
 import SecondaryButton from "@components/buttons/secondary.button";
 import OtpInput from "@components/inputs/otp.input";
 import Link from "next/link";
+import { useForm, SubmitHandler } from "react-hook-form";
 
+interface IFormInput {
+  email:String;
+  password:String;
+  
+}
 const ResetPasswordPage: NextPage = () => {
   const [isVerified, setIsVerified] = React.useState(false);
+  const { register, handleSubmit } = useForm<IFormInput>();
+  const onsubmit: SubmitHandler<IFormInput> = (data) => console.log(data);
 
   if (!isVerified) {
     return (
-      <div className="w-full min-h-screen flex flex-col my-8 md:my-11 justify-center align-middle px-4 md:px-6">
+      <div className="w-full font-archivo min-h-screen flex flex-col my-8 md:my-11 justify-center align-middle px-4 md:px-6">
         <div className="w-full">
           <Link href={"/"} passHref>
-            <div className="cursor-pointer text-center w-full md:w-1/3 mx-auto text-lg font-medium">
+            <div className="cursor-pointer text-center w-full md:w-1/2 lg:w-1/3 mx-auto text-lg font-bold">
               learnali.
             </div>
           </Link>
 
-          <div className="flex w-full md:w-1/3 my-6 font-medium mx-auto justify-between">
+          <div className="flex w-full md:w-1/2 lg:w-1/3 my-6 font-medium mx-auto justify-between">
             <Link href={"/auth/signup"} passHref>
               <div className="border-y border-l px-2 py-4 rounded-l-lg text-center w-1/2 cursor-pointer">
                 Join Learnali
@@ -34,15 +42,15 @@ const ResetPasswordPage: NextPage = () => {
               </div>
             </Link>
           </div>
-          <div className=" text-center w-full md:w-1/3 mx-auto font-medium">
+          <div className=" text-center w-full md:w-1/2 lg:w-1/3 mx-auto font-medium">
             Enter Password Code Here
           </div>
-          <div className=" text-center text-xs text-gray-400 w-full md:w-1/3 mx-auto font-medium">
+          <div className=" text-center text-xs text-gray-400 w-full md:w-1/2 lg:w-1/3 mx-auto font-medium">
             Check your email for the code or click the link in your email
           </div>
         </div>
 
-        <form className="w-full md:w-1/3 my-6 mx-auto">
+        <form className="w-full md:w-1/2 lg:w-1/3 my-6 mx-auto">
           <OtpInput
             label="Email Address"
             placeholder="Enter your email address"
@@ -50,7 +58,7 @@ const ResetPasswordPage: NextPage = () => {
             required
           />
 
-          <SecondaryButton
+          <PrimaryButton
             onclick={() => {
               setIsVerified(true);
             }}
@@ -62,15 +70,15 @@ const ResetPasswordPage: NextPage = () => {
     );
   } else {
     return (
-      <div className="w-full min-h-screen flex flex-col my-8 md:my-11 justify-center align-middle px-4 md:px-6">
+      <div className="w-full font-archivo min-h-screen flex flex-col my-8 md:my-11 justify-center align-middle px-4 md:px-6">
         <div className="w-full">
           <Link href={"/"} passHref>
-            <div className="cursor-pointer text-center w-full md:w-1/3 mx-auto text-lg font-medium">
+            <div className="cursor-pointer text-center w-full md:w-1/2 lg:w-1/3 mx-auto text-lg font-bold">
               learnali.
             </div>
           </Link>
 
-          <div className="flex w-full md:w-1/3 my-6 font-medium mx-auto justify-between">
+          <div className="flex w-full md:w-1/2 lg:w-1/3 my-6 font-medium mx-auto justify-between">
             <Link href={"/auth/signup"} passHref>
               <div className="border-y border-l px-2 py-4 rounded-l-lg text-center w-1/2 cursor-pointer">
                 Join Learnali
@@ -82,13 +90,18 @@ const ResetPasswordPage: NextPage = () => {
               </div>
             </Link>
           </div>
-          <div className=" text-center w-full md:w-1/3 mx-auto font-medium">
+          <div className=" text-center w-full md:w-1/2 lg:w-1/3 mx-auto font-medium">
             Let&apos; reset your password
           </div>
         </div>
 
-        <form className="w-full md:w-1/3 my-6 mx-auto">
+        <form
+          onSubmit={handleSubmit(onsubmit)}
+          className="w-full md:w-1/2 lg:w-1/3 my-6 mx-auto"
+        >
           <TextInput
+            register={register}
+            name={"email"}
             label="Email Address"
             placeholder="Enter your email address"
             type="email"
@@ -96,12 +109,14 @@ const ResetPasswordPage: NextPage = () => {
             required
           />
           <PasswordInput
+            register={register}
+            name={"password"}
             label="Confirm New Password"
             placeholder="Enter your password here"
             required
           />
 
-          <SecondaryButton type={"submit"} title={"Change Password"} />
+          <PrimaryButton type={"submit"} title={"Change Password"} />
         </form>
       </div>
     );

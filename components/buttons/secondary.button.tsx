@@ -10,7 +10,7 @@ const SecondaryButton = (props: {
     <button
       onClick={props.onclick}
       type={props.type ? props.type : "button"}
-      className="bg-white my-4 text-black p-4 text-center border-2 border-green-200 rounded-lg font-medium w-full"
+      className="bg-white my-4 font-inter focus:outline-none text-black p-4 text-center border-2 border-green-200 rounded-lg font-medium w-full"
     >
       {props.title}
     </button>
