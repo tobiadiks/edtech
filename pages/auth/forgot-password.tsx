@@ -8,12 +8,17 @@ import DualInput from "@components/inputs/dual.input";
 import SecondaryButton from "@components/buttons/secondary.button";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { useForm, SubmitHandler } from "react-hook-form";
 
+interface IFormInput {
+  email:String;
+}
 const ForgotPasswordPage: NextPage = () => {
   const route = useRouter();
-  const [email, setEmail] = React.useState("");
+  const { register, handleSubmit } = useForm<IFormInput>();
+  const onsubmit: SubmitHandler<IFormInput> = (data) => console.log(data);
   return (
-    <div className="w-full min-h-screen flex font-inter flex-col my-8 md:my-11 justify-center align-middle px-4 md:px-6">
+    <div className="w-full min-h-screen flex font-archivo flex-col my-8 md:my-11 justify-center align-middle px-4 md:px-6">
       <div className="w-full">
         <Link href={"/"} passHref>
           <div className="cursor-pointer text-center w-full md:w-1/2 lg:w-1/3 mx-auto text-lg font-bold">
@@ -41,22 +46,22 @@ const ForgotPasswordPage: NextPage = () => {
         </div>
       </div>
 
-      <form className="w-full md:w-1/2 lg:w-1/3 my-6 mx-auto">
+      <form
+      onSubmit={handleSubmit(onsubmit)}
+       className="w-full md:w-1/2 lg:w-1/3 my-6 mx-auto">
         <TextInput
           label="Email Address"
           placeholder="Enter your email address"
           type="email"
-          value={email}
-          onchange={(e: any) => setEmail(e.target.value)}
+          register={register}
+          name={'email'}
           required
         />
 
-        <SecondaryButton
-          type={"button"}
+        <PrimaryButton
+          type={"submit"}
           title={"Reset Password"}
-          onclick={() => {
-            email ? route.push("/auth/reset-password") : null;
-          }}
+         
         />
       </form>
     </div>

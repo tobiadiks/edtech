@@ -11,7 +11,7 @@ const CourseCard = (props: {
     <div className="bg-gray-100 rounded-md font-inter  flex flex-col justify-between p-2 mx-0 md:mx-1 my-1">
       <div className="w-full  flex flex-row  justify-between">
       <div className="h-8 w-8 md:mx-0  bg-gray-300 my-auto rounded-full md:mr-2"></div>
-        <div className="font-medium my-auto text-sm cursor-pointer">Enroll</div>
+        <div className="font-medium my-auto text-sm cursor-pointer">ENROLL</div>
       </div>
       <div className="mt-16">
         <div className="font-bold text-sm">{props.title}</div>

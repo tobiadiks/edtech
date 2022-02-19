@@ -8,6 +8,11 @@
 }
 
 @font-face {
+  font-family: Archivo;
+  src: url("../fonts/archivo/Archivo-Regular.woff") format("woff");
+}
+
+@font-face {
   font-family: Inter;
   src: url("../fonts/inter/Inter-Regular.woff") format("woff");
 }

@@ -12,6 +12,7 @@ module.exports = {
         'inter': [
           "Inter"
         ],
+        'archivo':["Archivo"]
       },
     },
   },

@@ -8,13 +8,21 @@ import DualInput from "@components/inputs/dual.input";
 import SecondaryButton from "@components/buttons/secondary.button";
 import OtpInput from "@components/inputs/otp.input";
 import Link from "next/link";
+import { useForm, SubmitHandler } from "react-hook-form";
 
+interface IFormInput {
+  email:String;
+  password:String;
+  
+}
 const ResetPasswordPage: NextPage = () => {
   const [isVerified, setIsVerified] = React.useState(false);
+  const { register, handleSubmit } = useForm<IFormInput>();
+  const onsubmit: SubmitHandler<IFormInput> = (data) => console.log(data);
 
   if (!isVerified) {
     return (
-      <div className="w-full font-inter min-h-screen flex flex-col my-8 md:my-11 justify-center align-middle px-4 md:px-6">
+      <div className="w-full font-archivo min-h-screen flex flex-col my-8 md:my-11 justify-center align-middle px-4 md:px-6">
         <div className="w-full">
           <Link href={"/"} passHref>
             <div className="cursor-pointer text-center w-full md:w-1/2 lg:w-1/3 mx-auto text-lg font-bold">
@@ -50,7 +58,7 @@ const ResetPasswordPage: NextPage = () => {
             required
           />
 
-          <SecondaryButton
+          <PrimaryButton
             onclick={() => {
               setIsVerified(true);
             }}
@@ -62,7 +70,7 @@ const ResetPasswordPage: NextPage = () => {
     );
   } else {
     return (
-      <div className="w-full font-inter min-h-screen flex flex-col my-8 md:my-11 justify-center align-middle px-4 md:px-6">
+      <div className="w-full font-archivo min-h-screen flex flex-col my-8 md:my-11 justify-center align-middle px-4 md:px-6">
         <div className="w-full">
           <Link href={"/"} passHref>
             <div className="cursor-pointer text-center w-full md:w-1/2 lg:w-1/3 mx-auto text-lg font-bold">
@@ -87,8 +95,13 @@ const ResetPasswordPage: NextPage = () => {
           </div>
         </div>
 
-        <form className="w-full md:w-1/2 lg:w-1/3 my-6 mx-auto">
+        <form
+          onSubmit={handleSubmit(onsubmit)}
+          className="w-full md:w-1/2 lg:w-1/3 my-6 mx-auto"
+        >
           <TextInput
+            register={register}
+            name={"email"}
             label="Email Address"
             placeholder="Enter your email address"
             type="email"
@@ -96,12 +109,14 @@ const ResetPasswordPage: NextPage = () => {
             required
           />
           <PasswordInput
+            register={register}
+            name={"password"}
             label="Confirm New Password"
             placeholder="Enter your password here"
             required
           />
 
-          <SecondaryButton type={"submit"} title={"Change Password"} />
+          <PrimaryButton type={"submit"} title={"Change Password"} />
         </form>
       </div>
     );

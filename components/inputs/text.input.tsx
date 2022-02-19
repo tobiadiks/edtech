@@ -9,6 +9,8 @@ const TextInput = (props: {
   type?: string;
   required?: boolean;
   onchange?: any;
+  name?: string;
+  register?: any;
   hint?: string;
 }) => {
   return (
@@ -19,7 +21,7 @@ const TextInput = (props: {
       <input
         className="focus:outline-none py-1 placeholder-gray-400 text-gray-900"
         type={props.type}
-        value={props.value}
+        {...props.register(props.name, { required: props.required })}
         placeholder={props.placeholder}
         onChange={props.onchange}
         required={props.required}
