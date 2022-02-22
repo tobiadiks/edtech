@@ -22,9 +22,9 @@ const SignInPage: NextPage = () => {
     password: Yup.string().required("Password is required"),
   });
   const formOptions = { resolver: yupResolver(validateSchema) };
-  const { register, handleSubmit, setError, formState } = useForm<IFormInput>(formOptions);
+  const { register, handleSubmit, setError, formState } = useForm(formOptions);
   const { errors } = formState;
-  const onsubmit: SubmitHandler<IFormInput> = (data) => {
+  const onsubmit = (data: any) => {
     console.log(data);
 
     return useService
@@ -64,7 +64,7 @@ const SignInPage: NextPage = () => {
       </div>
       {/* {errors.email?.message} */}
       <form
-        onSubmit={handleSubmit(onsubmit)}
+        onSubmit={handleSubmit((data)=>onsubmit(data))}
         className="w-full md:w-1/2 lg:w-1/3 my-6 mx-auto"
       >
         <TextInput
