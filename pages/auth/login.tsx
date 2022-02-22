@@ -6,6 +6,10 @@ import PasswordInput from "@components/inputs/password.input";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useForm, SubmitHandler } from "react-hook-form";
+import { useService } from "services/user.service";
+import LoadingButton from "@components/buttons/loading.button";
+import * as Yup from "yup";
+import { yupResolver } from "@hookform/resolvers/yup";
 
 interface IFormInput {
   email: String;
@@ -13,8 +17,25 @@ interface IFormInput {
 }
 const SignInPage: NextPage = () => {
   const route = useRouter();
-  const { register, handleSubmit } = useForm<IFormInput>();
-  const onsubmit: SubmitHandler<IFormInput> = (data) => console.log(data);
+  const validateSchema = Yup.object().shape({
+    email: Yup.string().required("Email is required"),
+    password: Yup.string().required("Password is required"),
+  });
+  const formOptions = { resolver: yupResolver(validateSchema) };
+  const { register, handleSubmit, setError, formState } = useForm<IFormInput>(formOptions);
+  const { errors } = formState;
+  const onsubmit: SubmitHandler<IFormInput> = (data) => {
+    console.log(data);
+
+    return useService
+      .login(data)
+      .then(() => {
+        route.push("/");
+      })
+      .catch((error) => {
+        setError("email", { message: 'error' });
+      });
+  };
 
   return (
     <div className="w-full min-h-screen font-archivo flex flex-col my-8 md:my-11 justify-center md:align-middle px-4 md:px-6">
@@ -41,14 +62,14 @@ const SignInPage: NextPage = () => {
           Let&apos;s log you back in!
         </div>
       </div>
-
+      {/* {errors.email?.message} */}
       <form
         onSubmit={handleSubmit(onsubmit)}
         className="w-full md:w-1/2 lg:w-1/3 my-6 mx-auto"
       >
         <TextInput
           register={register}
-          name={'email'}
+          name={"email"}
           label="Email Address"
           placeholder="Enter your email address"
           type="email"
@@ -66,7 +87,11 @@ const SignInPage: NextPage = () => {
             Forgot Password?
           </div>
         </Link>
-        <PrimaryButton type={"submit"} title={"Login to Learnali"} />
+        {formState.isSubmitting ? (
+          <LoadingButton />
+        ) : (
+          <PrimaryButton type={"submit"} title={"Login to Learnali"} />
+        )}
       </form>
     </div>
   );

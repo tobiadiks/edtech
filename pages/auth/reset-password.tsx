@@ -9,6 +9,7 @@ import SecondaryButton from "@components/buttons/secondary.button";
 import OtpInput from "@components/inputs/otp.input";
 import Link from "next/link";
 import { useForm, SubmitHandler } from "react-hook-form";
+import LoadingButton from "@components/buttons/loading.button";
 
 interface IFormInput {
   email:String;
@@ -17,7 +18,7 @@ interface IFormInput {
 }
 const ResetPasswordPage: NextPage = () => {
   const [isVerified, setIsVerified] = React.useState(false);
-  const { register, handleSubmit } = useForm<IFormInput>();
+  const { register, handleSubmit, formState,setError } = useForm<IFormInput>();
   const onsubmit: SubmitHandler<IFormInput> = (data) => console.log(data);
 
   if (!isVerified) {
@@ -115,8 +116,12 @@ const ResetPasswordPage: NextPage = () => {
             placeholder="Enter your password here"
             required
           />
-
-          <PrimaryButton type={"submit"} title={"Change Password"} />
+  {formState.isSubmitting ? (
+          <LoadingButton />
+        ) : (
+         <PrimaryButton type={"submit"} title={"Change Password"} />
+        )}
+          
         </form>
       </div>
     );

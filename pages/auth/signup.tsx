@@ -8,20 +8,33 @@ import DualInput from "@components/inputs/dual.input";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useForm, SubmitHandler } from "react-hook-form";
+import { useService } from "services/user.service";
+import LoadingButton from "@components/buttons/loading.button";
 
 interface IFormInput {
-  first_name:String;
-  last_name:String;
-  email:String;
-  country_id:String;
-  password:String;
-  password_confirmation:String;
-  phone_number:String;
+  first_name: String;
+  last_name: String;
+  email: String;
+  country_id: String;
+  password: String;
+  password_confirmation: String;
+  phone_number: String;
 }
 const SignUpPage: NextPage = () => {
   const route = useRouter();
-  const { register, handleSubmit } = useForm<IFormInput>();
-  const onsubmit: SubmitHandler<IFormInput> = (data) => console.log(data);
+  const { register, handleSubmit, setError, formState } = useForm<IFormInput>();
+  const onsubmit: SubmitHandler<IFormInput> = (data) => {
+    console.log(data);
+
+    return useService
+      .signup(data)
+      .then(() => {
+        route.push("/onboarding/career-path");
+      })
+      .catch((error) => {
+        setError("email", { message: error });
+      });
+  };
 
   return (
     <div className="w-full font-archivo min-h-screen flex flex-col my-8 md:my-11 justify-center align-middle px-4 md:px-6">
@@ -49,25 +62,33 @@ const SignUpPage: NextPage = () => {
         </div>
       </div>
 
-      <form onSubmit={handleSubmit(onsubmit)} className="w-full md:w-1/2 lg:w-1/3 my-6 mx-auto">
+      <form
+        onSubmit={handleSubmit(onsubmit)}
+        className="w-full md:w-1/2 lg:w-1/3 my-6 mx-auto"
+      >
         <DualInput
           first_register={register}
-          first_name={'first_name'}
+          first_name={"first_name"}
           second_register={register}
-          second_name={'last_name'}
+          second_name={"last_name"}
           first_label="First name"
           second_label="Last Name"
           first_placeholder="Your first name"
           second_placeholder="Your last name"
+          first_required
+          second_required
           hint="We are big on real names here"
         />
         <SelectInput
-        register={register}
-        name={'country_id'}
-        label="Where are you from" placeholder="Select" />
+          register={register}
+          name={"country_id"}
+          label="Where are you from"
+          placeholder="Select"
+          required
+        />
         <TextInput
           register={register}
-          name={'email'}
+          name={"email"}
           label="Email Address"
           placeholder="Enter your email address"
           type="email"
@@ -75,7 +96,7 @@ const SignUpPage: NextPage = () => {
         />
         <TextInput
           register={register}
-          name={'phone_number'}
+          name={"phone_number"}
           label="Phone"
           placeholder="Enter your phone number"
           type="tel"
@@ -83,23 +104,23 @@ const SignUpPage: NextPage = () => {
         />
         <PasswordInput
           register={register}
-          name={'password'}
+          name={"password"}
           label="Your Password"
           placeholder="Enter your password"
           required
         />
         <PasswordInput
           register={register}
-          name={'password_confirmation'}
+          name={"password_confirmation"}
           label="Confirm Password"
           placeholder="Re-enter your password"
           required
         />
-        <PrimaryButton
-          
-          type={"submit"}
-          title={"Create an Account"}
-        />
+        {formState.isSubmitting ? (
+          <LoadingButton />
+        ) : (
+          <PrimaryButton type={"submit"} title={"Create an Account"} />
+        )}
       </form>
     </div>
   );
