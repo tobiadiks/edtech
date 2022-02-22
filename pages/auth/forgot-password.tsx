@@ -9,13 +9,14 @@ import SecondaryButton from "@components/buttons/secondary.button";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useForm, SubmitHandler } from "react-hook-form";
+import LoadingButton from "@components/buttons/loading.button";
 
 interface IFormInput {
-  email:String;
+  email: String;
 }
 const ForgotPasswordPage: NextPage = () => {
   const route = useRouter();
-  const { register, handleSubmit } = useForm<IFormInput>();
+  const { register, handleSubmit, setError, formState } = useForm<IFormInput>();
   const onsubmit: SubmitHandler<IFormInput> = (data) => console.log(data);
   return (
     <div className="w-full min-h-screen flex font-archivo flex-col my-8 md:my-11 justify-center align-middle px-4 md:px-6">
@@ -47,22 +48,22 @@ const ForgotPasswordPage: NextPage = () => {
       </div>
 
       <form
-      onSubmit={handleSubmit(onsubmit)}
-       className="w-full md:w-1/2 lg:w-1/3 my-6 mx-auto">
+        onSubmit={handleSubmit(onsubmit)}
+        className="w-full md:w-1/2 lg:w-1/3 my-6 mx-auto"
+      >
         <TextInput
           label="Email Address"
           placeholder="Enter your email address"
           type="email"
           register={register}
-          name={'email'}
+          name={"email"}
           required
         />
-
-        <PrimaryButton
-          type={"submit"}
-          title={"Reset Password"}
-         
-        />
+        {formState.isSubmitting ? (
+          <LoadingButton />
+        ) : (
+          <PrimaryButton type={"submit"} title={"Reset Password"} />
+        )}
       </form>
     </div>
   );
