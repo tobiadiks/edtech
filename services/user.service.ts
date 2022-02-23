@@ -2,10 +2,10 @@ import { BehaviorSubject } from "rxjs";
 import Router from "next/router";
 import axios from "axios";
 
-const baseUrl = 'https://staging-api.learnali.com/auth'
+const baseUrl = 'http://staging-api.learnali.com/auth'
 
 
-const userSubject = new BehaviorSubject(process.browser && JSON.parse('' && localStorage.getItem('user')))
+const userSubject = new BehaviorSubject(process.browser && JSON.parse(localStorage.getItem('user')))
 
 
 
