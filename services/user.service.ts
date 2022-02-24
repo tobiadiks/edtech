@@ -11,9 +11,7 @@ const userSubject = new BehaviorSubject(process.browser && JSON.parse(localStora
 
 const login = async (body: any) => {
     const data = await axios.post(`${baseUrl}/login`,
-        {
-            body
-        },
+            body,
         {
             headers: { 'Content-Type': 'application/json' }
         }
@@ -26,9 +24,7 @@ const login = async (body: any) => {
 
 const signup = async (body: any) => {
     const data = await axios.post(`${baseUrl}/signup`,
-        {
-            body
-        },
+            body,
         {
             headers: { 'Content-Type': 'application/json' }
         }

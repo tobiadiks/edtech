@@ -28,9 +28,9 @@ const SignInPage: NextPage = () => {
     console.log(data);
 
     return useService
-      .login(data)
+      .login(JSON.stringify(data))
       .then(() => {
-        route.push("/");
+        route.push("/dashboard");
       })
       .catch((error) => {
         setError("email", { message: 'error' });

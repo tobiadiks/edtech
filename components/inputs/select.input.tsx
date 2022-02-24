@@ -9,8 +9,8 @@ const SelectInput = (props: {
   type?: string;
   onchange?: any;
   required?: boolean;
-  register?:any;
-  name?:string;
+  register?: any;
+  name?: string;
   hint?: string;
 }) => {
   return (
@@ -20,13 +20,13 @@ const SelectInput = (props: {
       </label>
       <select
         className="focus:outline-none py-1 bg-transparent placeholder-gray-400 text-gray-900"
-        {...props.register(props.name,{required:props.required})}
+        {...props.register(props.name, { required: props.required })}
         placeholder={props.placeholder}
         onChange={props.onchange}
         required={props.required}
       >
-        <option>Nigeria</option>
-        <option>South Africa</option>
+        <option value={'92485dfc-3b42-414c-b577-63e089b2b538'}>Nigeria</option>
+        {/* <option>South Africa</option> */}
       </select>
     </div>
   );

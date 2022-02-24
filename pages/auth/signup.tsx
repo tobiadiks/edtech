@@ -27,7 +27,7 @@ const SignUpPage: NextPage = () => {
     console.log(data);
 
     return useService
-      .signup(data)
+      .signup(JSON.stringify(data))
       .then(() => {
         route.push("/onboarding/career-path");
       })
