@@ -4,7 +4,7 @@ import Link from "next/link";
 const HeaderNavigation: NextPage = () => {
   return (
     <div className="w-full font-inter fixed bg-white top-0">
-      <div className="border px-4 md:px-4 lg:px-24 grid grid-cols-4">
+      <div className="border px-4 md:px-4 lg:px-8 grid grid-cols-4">
         <div className=" col-span-2 my-auto py-2  flex h-full">
           <Link href={"/"} passHref>
             <div className="cursor-pointer  text-lg font-bold my-auto">
