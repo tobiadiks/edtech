@@ -1,9 +1,10 @@
 import type { NextPage } from "next";
 import Link from "next/link";
+import cn from 'classnames'
 
 const HeaderNavigation: NextPage = () => {
   return (
-    <div className="w-full font-inter fixed bg-white top-0">
+    <div className="w-full z-50 font-inter fixed bg-white top-0">
       <div className="border px-4 md:px-4 lg:px-8 grid grid-cols-4">
         <div className=" col-span-2 my-auto py-2  flex h-full">
           <Link href={"/"} passHref>
@@ -13,11 +14,11 @@ const HeaderNavigation: NextPage = () => {
           </Link>
         </div>
 
-        <div className="col-span-1 border-l py-2  px-2 my-auto h-full">
+        <div className="col-span-1 hover:bg-green-100 border-l py-2  px-2 my-auto h-full">
           <div className="font-medium text-xs text-gray-400">
             Wallet Balance
           </div>
-          <div className=" font-medium text-sm">N/A</div>
+          <div className={cn(" font-medium text-sm", true ? 'text-green-400' : 'text-black')}>NGN {true ? '78,900' : 'N/A'}</div>
         </div>
 
         <div className="col-span-1 border-l py-2  px-2 my-auto flex h-full">
