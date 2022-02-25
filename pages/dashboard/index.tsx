@@ -1,4 +1,5 @@
 import type { NextPage } from "next";
+import cn from 'classnames'
 import PrimaryButton from "@components/buttons/primary.button";
 import * as React from "react";
 import CourseCard from "@components/cards/courses.card";
@@ -7,13 +8,16 @@ import CurrentCourseCard from "@components/cards/currentcourse.card";
 import OtherCourseCard from "@components/cards/othercourses.card";
 //import LearningChartCard from "@components/cards/learningchart.card";
 import dynamic from "next/dynamic";
+import CertProgressCard from "@components/cards/certprogress.card";
+import PercentageAchieversCard from "@components/cards/percentachievers.card";
+import CareerPathProgressCard from "@components/cards/careerpathprogress.card";
+import LearningChartCard from "@components/cards/learningchart.card";
 
-const LearningChartCard = dynamic(()=>import('@components/cards/learningchart.card'),
-{
-  ssr:false
-})
+
 //user dashboard
 const DashBoardPage: NextPage = () => {
+const [statVisible,setStatVisible]= React.useState(true)
+
   return (
     <>
       <HeaderNavigation />
@@ -44,28 +48,31 @@ const DashBoardPage: NextPage = () => {
           </div>
         </div>
 
-        <div className="font-medium mt-8">
+        <div className={"font-medium mt-8"}>
           <div>
-            Learning Stat <span className="text-green-400 text-sm cursor-pointer">Hide</span>
+            Learning Stat <span className="text-green-400 text-sm cursor-pointer" onClick={()=>{setStatVisible(!statVisible)}}>{statVisible?'Hide':'Show'}</span>
           </div>
-          <div className="flex flex-col md:flex-row justify-between text-sm">
+          <div className={cn(" flex-col md:flex-row justify-between text-sm", statVisible?'flex':'hidden')}>
             <div>Displaying your stats over time</div>
-            <div className="flex text-gray-400 mt-2 md:mt-0 ">
-              <div className="hover:text-green-400 cursor-pointer mx-2 active:hover:text-green-400">
+            <div className="flex justify-between  text-gray-400 mt-2 md:mt-0 ">
+              <div className="hover:text-green-400 cursor-pointer md:mx-2 active:hover:text-green-400">
                 Today
               </div>
-              <div className="hover:text-green-400 cursor-pointer mx-2 text-green-400 active:hover:text-green-400">
+              <div className="hover:text-green-400 cursor-pointer md:mx-2 text-green-400 active:hover:text-green-400">
                 This Week
               </div>
-              <div className="hover:text-green-400 cursor-pointer mx-2 active:hover:text-green-400">
+              <div className="hover:text-green-400 cursor-pointer md:mx-2 active:hover:text-green-400">
                 This Month
               </div>
             </div>
           </div>
         </div>
 
-        <div className="my-4 p-2 w-full   border rounded-xl grid grid-cols-1 md:grid-cols-4 lg:grid-cols-4 ">
-          <LearningChartCard />
+        <div className={cn("my-4 p-2 w-full   border rounded-xl  grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 ",statVisible?'grid':'hidden')}>
+          <div className="border-b md:border-b-0 md:border-r xl:border-r w-full"><LearningChartCard /></div>
+          <div className="border-b md:border-b-0 md:border-r-0 xl:border-r"><CertProgressCard /></div>
+          <div className="border-b md:border-b-0 md:border-r md:border-t  xl:border-r"><PercentageAchieversCard /></div>
+          <div className=" md:border-t"><CareerPathProgressCard /></div>
         </div>
 
         <div className="font-medium mt-4 border rounded-xl p-2">
