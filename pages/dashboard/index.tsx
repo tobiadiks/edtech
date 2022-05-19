@@ -24,31 +24,31 @@ const [statVisible,setStatVisible]= React.useState(true)
       <div className="w-full font-inter min-h-screen  mt-16 flex flex-col px-4 md:px-4 lg:px-8">
         <div className="flex flex-col  w-full mt-4">
           <div className=" flex flex-col">
-            <div className="font-medium text-black">
+            <div className="font-semibold text-black">
               My Learning Badges and Certs
             </div>
-            <div className="font-medium text-xs text-gray-400">
+            <div className="font-semibold text-xs text-gray-400">
               All your badges and certs will appear here as you earn them on
               Learnali
             </div>
           </div>
 
           <div className="mx-0  flex flex-wrap lg:flex-nowrap flex-row mt-2">
-            <div className="mx-1 md:mx-2 my-1 flex h-fit  cursor-pointer font-medium text-sm text-center p-2 rounded-2xl bg-green-100 border-0">
+            <div className="mx-1 md:mx-2 my-1 flex h-fit  cursor-pointer font-semibold text-sm text-center p-2 rounded-2xl bg-green-100 border-0">
               <div className="h-8 w-8 bg-white md:my-auto mr-1   rounded-full border-2 border-black"></div>{" "}
               <div className="my-auto">Night Owl</div>
             </div>
-            <div className="mx-1 md:mx-2 my-1 flex h-fit  cursor-pointer font-medium text-sm text-center p-2 rounded-2xl bg-green-100 border-0">
+            <div className="mx-1 md:mx-2 my-1 flex h-fit  cursor-pointer font-semibold text-sm text-center p-2 rounded-2xl bg-green-100 border-0">
               <div className="h-8 w-8 bg-white my-auto  mr-1 rounded-full border-2 border-black"></div>{" "}
               <div className="my-auto">2x Learner</div>
             </div>
-            {/* <div className="mx-1 md:mx-2 flex h-fit  cursor-pointer font-medium text-sm text-center p-2 rounded-2xl bg-green-100 border-0">
+            {/* <div className="mx-1 md:mx-2 flex h-fit  cursor-pointer font-semibold text-sm text-center p-2 rounded-2xl bg-green-100 border-0">
             <div className="h-8 w-8 bg-white my-auto mr-1 rounded-full border-2 border-black"></div> <div className="my-auto">Night Owl</div>
             </div> */}
           </div>
         </div>
 
-        <div className={"font-medium mt-8"}>
+        <div className={"font-semibold mt-8"}>
           <div>
             Learning Stat <span className="text-green-400 text-sm cursor-pointer" onClick={()=>{setStatVisible(!statVisible)}}>{statVisible?'Hide':'Show'}</span>
           </div>
@@ -75,12 +75,12 @@ const [statVisible,setStatVisible]= React.useState(true)
           <div className=" md:border-t"><CareerPathProgressCard /></div>
         </div>
 
-        <div className="font-medium mt-4 border rounded-xl p-2">
+        <div className="font-semibold mt-4 border rounded-xl p-2">
           <div className="w-full flex justify-between">
             <div>Your Courses</div>
             <div className="cursor-pointer font-bold text-green-400">Find More Courses</div>
           </div>
-          <div className="font-medium text-xs text-gray-400">
+          <div className="font-semibold text-xs text-gray-400">
             This are courses you are currently taking based on your path
           </div>
 
@@ -95,11 +95,11 @@ const [statVisible,setStatVisible]= React.useState(true)
         </div>
 
 
-        <div className="font-medium my-4">
+        <div className="font-semibold my-4">
           <div>
             Other Courses You&apos;ll Love
           </div>
-          <div className="font-medium text-xs text-gray-400">
+          <div className="font-semibold text-xs text-gray-400">
             This are courses you might want to give a shot
           </div>
 

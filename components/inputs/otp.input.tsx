@@ -12,39 +12,40 @@ const OtpInput = (props: {
 }) => {
   return (
     <div className="my-4 px-0 w-full font-inter flex flex-col ">
-      <div className="flex justify-even">
+      
+      <div className="grid gap-1 grid-cols-6">
         <input
-          className="w-1/6 h-14 border-2  border-gray-400 focus:border-black  rounded-lg text-center text-2xl font-medium"
+          className=" h-14 border-2  border-gray-400 focus:border-black  rounded-lg text-center text-2xl font-semibold"
           minLength={1}
           maxLength={1}
           type="text"
         />
         <input
-          className="w-1/6 h-14 border-2  border-gray-400 focus:border-black  rounded-lg text-center text-2xl font-medium"
+          className=" h-14 border-2  border-gray-400 focus:border-black  rounded-lg text-center text-2xl font-semibold"
           minLength={1}
           maxLength={1}
           type="text"
         />
         <input
-          className="w-1/6 h-14 border-2  border-gray-400 focus:border-black  rounded-lg text-center text-2xl font-medium"
+          className=" h-14 border-2  border-gray-400 focus:border-black  rounded-lg text-center text-2xl font-semibold"
           minLength={1}
           maxLength={1}
           type="text"
         />
         <input
-          className="w-1/6 h-14 border-2  border-gray-400 focus:border-black  rounded-lg text-center text-2xl font-medium"
+          className=" h-14 border-2  border-gray-400 focus:border-black  rounded-lg text-center text-2xl font-semibold"
           minLength={1}
           maxLength={1}
           type="text"
         />
         <input
-          className="w-1/6 h-14 border-2  border-gray-400 focus:border-black  rounded-lg text-center text-2xl font-medium"
+          className=" h-14 border-2  border-gray-400 focus:border-black  rounded-lg text-center text-2xl font-semibold"
           minLength={1}
           maxLength={1}
           type="text"
         />
         <input
-          className="w-1/6 h-14 border-2  border-gray-400 focus:border-black  rounded-lg text-center text-2xl font-medium"
+          className=" h-14 border-2  border-gray-400 focus:border-black  rounded-lg text-center text-2xl font-semibold"
           minLength={1}
           maxLength={1}
           type="text"

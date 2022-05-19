@@ -18,7 +18,7 @@ const CareerPathProgressCard = (props: {
                 <div className="w-full  flex flex-row justify-between">
                     <div className="flex flex-col">
                         <div className="text-xs text-gray-400">Career Path Progress</div>
-                        <div className="font-medium  text-sm">QA Analyst <span className="text-gray-400">Track</span></div>
+                        <div className="font-semibold  text-sm">QA Analyst <span className="text-gray-400">Track</span></div>
                     </div>
                     <div className="text-xs my-auto text-green-400 cursor-pointer">Change Track</div>
                 </div>

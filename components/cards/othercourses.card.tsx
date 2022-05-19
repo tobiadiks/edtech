@@ -14,10 +14,10 @@ const OtherCourseCard = (props: {
                     {/* {props.started ?
                         <div className="h-8 w-8  md:mx-0 border-2 border-green-400 bg-white my-auto rounded-full md:mr-2"></div>
                         :
-                        <div className="font-medium  text-sm cursor-pointer mb-2  ">ENROLL</div>
+                        <div className="font-semibold  text-sm cursor-pointer mb-2  ">ENROLL</div>
                     } */}
 
-                    {/* <div className="font-medium my-auto text-sm cursor-pointer">ENROLL</div> */}
+                    {/* <div className="font-semibold my-auto text-sm cursor-pointer">ENROLL</div> */}
                 </div>
                 <div className="mt-32 ">
                 </div>

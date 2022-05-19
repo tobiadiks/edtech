@@ -18,7 +18,7 @@ const PercentageAchieversCard = (props: {
             <div className="bg-white rounded-xl font-inter  flex flex-col justify-between p-2 mx-0 ">
                 <div className="w-full  flex flex-col">
                     <div className="text-xs text-gray-400">Achieved by only 12% of our learners</div>
-                    <div className="font-medium  text-sm">34 Courses <span className="text-gray-400">Taken</span></div>
+                    <div className="font-semibold  text-sm">34 Courses <span className="text-gray-400">Taken</span></div>
                 </div>
                 <div className="mt-2 w-full h-32 flex  ">
                     <div className="w-1/2 h-full">

@@ -15,7 +15,7 @@ const TextInput = (props: {
 }) => {
   return (
     <div className="my-4 px-2 font-inter w-full flex flex-col border rounded-lg">
-      <label className="text-gray-400 py-1 font-medium text-sm">
+      <label className="text-gray-400 py-1 font-semibold text-sm">
         {props.label}
       </label>
       <input
