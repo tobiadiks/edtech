@@ -23,7 +23,7 @@ const DualInput = (props: {
     <div className="my-4 font-inter flex flex-col w-full">
       <div className="flex flex-row">
         <div className="border-y rounded-l-lg border-l px-2 w-1/2">
-          <label className="text-gray-400 py-1 font-medium text-sm">
+          <label className="text-gray-400 py-1 font-semibold text-sm">
             {props.first_label}
           </label>
           <input
@@ -35,7 +35,7 @@ const DualInput = (props: {
           />
         </div>
         <div className="border-y rounded-r-lg border-l border-r px-2 w-1/2">
-          <label className="text-gray-400 py-1 font-medium text-sm">
+          <label className="text-gray-400 py-1 font-semibold text-sm">
             {props.second_label}
           </label>
           <input

@@ -15,15 +15,15 @@ const HeaderNavigation: NextPage = () => {
         </div>
 
         <div className="col-span-1 hover:bg-green-100 border-l py-2  px-2 my-auto h-full">
-          <div className="font-medium text-xs text-gray-400">
+          <div className="font-semibold text-xs text-gray-400">
             Wallet Balance
           </div>
-          <div className={cn(" font-medium text-sm", true ? 'text-green-400' : 'text-black')}>NGN {true ? '78,900' : 'N/A'}</div>
+          <div className={cn(" font-semibold text-sm", true ? 'text-green-400' : 'text-black')}>NGN {true ? '78,900' : 'N/A'}</div>
         </div>
 
         <div className="col-span-1 border-l py-2  px-2 my-auto flex h-full">
           <div className="h-8 w-8 md:mx-0 mx-auto bg-gray-300 my-auto rounded-full md:mr-2"></div>
-          <div className="cursor-pointer hidden md:inline text-sm font-medium my-auto ">
+          <div className="cursor-pointer hidden md:inline text-sm font-semibold my-auto ">
             Tamoru Dara
           </div>
         </div>

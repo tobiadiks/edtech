@@ -9,7 +9,7 @@ const PrimaryButton = (props: {
     <button
       onClick={props.onclick}
       type={props.type ? props.type : "button"}
-      className="bg-black my-4 font-inter focus:outline-none text-white p-4 font-medium text-center rounded-lg w-full hover:bg-white hover:text-black hover:border-2 hover:border-green-200"
+      className="bg-black my-4 font-inter focus:outline-none text-white p-4 font-semibold text-center rounded-lg w-full hover:bg-white hover:text-green-400 hover:border hover:border-green-400"
     >
       {props.title}
     </button>

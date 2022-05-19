@@ -12,29 +12,29 @@ const CareerPathPage: NextPage = () => {
       <div className="w-full font-inter min-h-screen  mt-16 flex flex-col px-4 md:px-4 lg:px-8">
         <div className="flex flex-col lg:flex-row  w-full mt-4">
           <div className=" flex flex-col">
-            <div className="font-medium text-black">
+            <div className="font-semibold text-black">
               Let&apos;s find you a{" "}
               <span className="text-green-400 font-bold">Career Path</span>
             </div>
-            <div className="font-medium text-xs text-gray-400">
+            <div className="font-semibold text-xs text-gray-400">
               The very last step before you head in
             </div>
           </div>
 
           <div className="mx-0 lg:mx-8 flex flex-wrap lg:flex-nowrap flex-row mt-2 md:mt-0">
-            <div className="mx-1 md:mx-2 h-fit  cursor-pointer font-medium text-sm text-center p-2 rounded-2xl bg-green-100 border-0">
+            <div className="mx-1 md:mx-2 h-fit  cursor-pointer font-semibold text-sm text-center p-2 rounded-2xl bg-green-100 border-0">
             Engineering
             </div>
-            <div className="mx-1 md:mx-2 h-fit border cursor-pointer font-medium text-sm text-center p-2 rounded-2xl active:bg-green-100 active:border-0">
+            <div className="mx-1 md:mx-2 h-fit border cursor-pointer font-semibold text-sm text-center p-2 rounded-2xl active:bg-green-100 active:border-0">
               Creative
             </div>
-            <div className="mx-1 md:mx-2 h-fit border cursor-pointer font-medium text-sm text-center p-2 rounded-2xl active:bg-green-100 active:border-0">
+            <div className="mx-1 md:mx-2 h-fit border cursor-pointer font-semibold text-sm text-center p-2 rounded-2xl active:bg-green-100 active:border-0">
               Management
             </div>
           </div>
         </div>
 
-        <div className="font-medium mt-8">
+        <div className="font-semibold mt-8">
           72,800 Areas <span className="text-gray-400">Available</span>
         </div>
 

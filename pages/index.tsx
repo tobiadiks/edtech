@@ -5,7 +5,7 @@ import Link from "next/link";
 //the home page for a logged in user
 const HomePage: NextPage = () => {
   return (
-    <div className="w-full font-archivo min-h-screen flex justify-center align-middle">
+    <div className="w-full font-inter min-h-screen flex justify-center align-middle">
       <Head>
         <title>Dashboard</title>
         <meta name="description" content="your learnali dashboard" />
@@ -17,7 +17,7 @@ const HomePage: NextPage = () => {
 
         <Link href={"/auth/login"} passHref>
           <p className="cursor-pointer hover:bg-slate-700">
-            Get started by editing
+            Get started
           </p>
         </Link>
       </main>

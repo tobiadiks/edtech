@@ -19,7 +19,7 @@ const PasswordInput =
   ) => {
     return (
       <div className="my-4 px-2 font-inter flex flex-col border rounded-lg w-full">
-        <label className="text-gray-400 py-1 font-medium text-sm">
+        <label className="text-gray-400 py-1 font-semibold text-sm">
           {props.label}
         </label>
         <input
