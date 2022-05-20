@@ -82,10 +82,10 @@ const AssessmentPage: NextPage = () => {
 <div className="absolute top-0 left-0 bg-green-400 w-1/3 h-1"></div>
     </div>
 </div>
-                <div className="flex my-4 snap-x px-4 snap-mandatory space-x-4 w-full  h-48  no-scrollbar overflow-x-scroll">
+                <div className="flex my-4 snap-x px-4 snap-mandatory space-x-4 w-full    no-scrollbar overflow-x-scroll">
 
 
-                    <div className="flex-none snap-center rounded px-2 py-2 bg-gray-100  lg:w-full w-11/12 h-full">
+                    <div className="flex-none snap-center rounded p-4 bg-gray-100  lg:w-full w-11/12 h-full">
                         <div className="font-semibold text-sm">Which of these subjects would you
                             most like to take a class in?</div>
                             <div className="w-full mt-4">
@@ -95,7 +95,7 @@ const AssessmentPage: NextPage = () => {
                         </div>
                       
                     </div>
-                    <div className="flex-none snap-center rounded px-2 py-2 bg-yellow-100  lg:w-full w-11/12 h-full">
+                    <div className="flex-none snap-center rounded p-4 bg-yellow-100  lg:w-full w-11/12 h-full">
                         <div className="font-semibold text-sm">Which of these subjects would you
                             most like to take a class in?</div>
                             <div className="w-full mt-4">
@@ -105,7 +105,7 @@ const AssessmentPage: NextPage = () => {
                         </div>
                         
                     </div>
-                    <div className="flex-none snap-center rounded px-2 py-2 bg-blue-100  lg:w-full w-11/12 h-full">
+                    <div className="flex-none snap-center rounded p-4 bg-blue-100  lg:w-full w-11/12 h-full">
                         <div className="font-semibold text-sm">Which of these subjects would you
                             most like to take a class in?</div>
                             <div className="w-full mt-4">
