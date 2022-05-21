@@ -12,7 +12,7 @@ const CareerSummaryPage: NextPage = () => {
             <HeaderNavigation />
             <div className="w-full font-inter min-h-screen lg:mt-16  mt-24 flex flex-col px-4 md:px-4 lg:px-8">
                 <div className="flex flex-col lg:flex-row  w-full mt-4">
-                    <div className=" flex flex-col">
+                    <div className=" flex flex-col mx-auto text-center my-4">
                         <div className="font-semibold text-black">
                             Recommended Paths and Breakdown
                         </div>
@@ -113,7 +113,7 @@ const CareerSummaryPage: NextPage = () => {
 
                                 <div className="text-xs flex ml-4">
                                     <div className="rounded-full mr-1 h-6 w-6 bg-green-200"></div>
-                                    <div>
+                                    <div className="w-fit">
                                         <div className="font-semibold">Certificate</div>
                                         <div className="text-green-400">Available on completion</div>
                                     </div>
