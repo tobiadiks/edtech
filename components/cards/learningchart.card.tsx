@@ -15,7 +15,7 @@ const LearningChartCard = (props: {
                     <div className="text-xs text-gray-400">Total Learning Hours</div>
                     <div className="font-semibold  text-sm">36 Hours <span className="text-gray-400">this week</span></div>
                 </div>
-                <div className="mt-2 w-full h-32 ">
+                <div className="mt-y w-full h-32 ">
 
                     <ResponsiveLine
                         enablePoints={false}
@@ -55,6 +55,7 @@ const LearningChartCard = (props: {
 
                     />
                 </div>
+                <div className="my-2"><div></div><div className="text-sm font-semibold">That&apos;s 68% more than 8,543 people</div></div>
             </div>
 
         </div>

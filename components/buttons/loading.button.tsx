@@ -4,7 +4,7 @@ const LoadingButton = () => {
   return (
     <button
       disabled
-      type={"button"}
+      type={'button'}
       className="bg-green-50 my-4 font-inter focus:outline-none text-black p-4 font-semibold text-center rounded-lg w-full "
     >
       Loading... 

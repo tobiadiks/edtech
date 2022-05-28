@@ -12,12 +12,18 @@ import * as Yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import SecondaryButton from "@components/buttons/secondary.button";
 import Image from "next/image";
+import CareerPathAssessmentCard from "@components/cards/careerpathassessment.card";
 
 interface IFormInput {
     email: String;
     password: String;
 }
 const AssessmentPage: NextPage = () => {
+    const [question1,setQuestion1]=React.useState('')
+    const [question2,setQuestion2]=React.useState('')
+    const [question3,setQuestion3]=React.useState('')
+    const [percentage,setPercentage]=React.useState(0)
+
     const route = useRouter();
     const validateSchema = Yup.object().shape({
         email: Yup.string().required("Email is required"),
@@ -26,7 +32,7 @@ const AssessmentPage: NextPage = () => {
     const formOptions = { resolver: yupResolver(validateSchema) };
     const { register, handleSubmit, setError, formState } = useForm(formOptions);
     const { errors } = formState;
-    const onsubmit = (data: any) => {
+    const onsubmit = async (data: any) => {
         console.log(data);
 
         return useService
@@ -55,7 +61,10 @@ const AssessmentPage: NextPage = () => {
             </div>
             {/* {errors.email?.message} */}
             <form
-                onSubmit={handleSubmit((data) => onsubmit(data))}
+                onSubmit={handleSubmit((data) => {
+                    console.log(data)
+                    // onsubmit(data)
+                })}
                 className="w-full relative md:w-1/2 shadow  bg-white lg:w-1/3 py-4 border border-green-400 rounded-lg  mx-auto"
             >
                 <div className="flex justify-between px-4">
@@ -75,47 +84,51 @@ const AssessmentPage: NextPage = () => {
                         </div>
                     </div>
                 </div>
-<div className="w-full px-4 mt-2">
-    <div className="flex justify-between font-semibold text-sm"><div>Previous</div>
-    <div className="text-green-400">Next Question</div></div>
-    <div className="w-full mt-2 relative h-1 rounded bg-green-100">
-<div className="absolute top-0 left-0 bg-green-400 w-1/3 h-1"></div>
-    </div>
-</div>
+                <div className="w-full px-4 mt-2">
+                    <div className="flex justify-between font-semibold text-sm"><div className="cursor-pointer">Previous</div>
+                        <div className="text-green-400 cursor-pointer">Next Question</div></div>
+                    <div className="w-full mt-2 relative h-1 rounded bg-green-100">
+                        <div className={`absolute top-0 left-0 bg-green-400 w-[${percentage.toFixed(0)}%] h-1`}></div>
+                    </div>
+                </div>
                 <div className="flex my-4 snap-x px-4 snap-mandatory space-x-4 w-full    no-scrollbar overflow-x-scroll">
 
+                    <CareerPathAssessmentCard
+                        register={register}
+                        question="Which of these subjects would you
+                    most like to take a class in?"
+                        optionA="Math"
+                        optionB="English"
+                        optionC="Physics"
+                        id="Question1"
+                        onclick={(e: any) =>{setQuestion1(e.target.value);setPercentage(33)}}
+                        value={question1}
+                    />
 
-                    <div className="flex-none snap-center rounded p-4 bg-gray-100  lg:w-full w-11/12 h-full">
-                        <div className="font-semibold text-sm">Which of these subjects would you
-                            most like to take a class in?</div>
-                            <div className="w-full mt-4">
-                            <div className="flex justify-between w-full p-2 bg-white"><div className='text-xs font-semibold '>Making Robots</div><div></div></div>
-                            <div className="flex justify-between w-full p-2 bg-green-100 "><div className='text-xs font-semibold '>Making Robots</div><div></div></div>
-                            <div className="flex justify-between w-full p-2 bg-white"><div className='text-xs font-semibold'>Making Robots</div><div></div></div>
-                        </div>
-                      
-                    </div>
-                    <div className="flex-none snap-center rounded p-4 bg-yellow-100  lg:w-full w-11/12 h-full">
-                        <div className="font-semibold text-sm">Which of these subjects would you
-                            most like to take a class in?</div>
-                            <div className="w-full mt-4">
-                            <div className="flex justify-between w-full p-2 bg-white"><div className='text-xs font-semibold '>Making Robots</div><div></div></div>
-                            <div className="flex justify-between w-full p-2 bg-green-100 "><div className='text-xs font-semibold '>Making Robots</div><div></div></div>
-                            <div className="flex justify-between w-full p-2 bg-white"><div className='text-xs font-semibold'>Making Robots</div><div></div></div>
-                        </div>
-                        
-                    </div>
-                    <div className="flex-none snap-center rounded p-4 bg-blue-100  lg:w-full w-11/12 h-full">
-                        <div className="font-semibold text-sm">Which of these subjects would you
-                            most like to take a class in?</div>
-                            <div className="w-full mt-4">
-                            <div className="flex justify-between w-full p-2 bg-white"><div className='text-xs font-semibold '>Making Robots</div><div></div></div>
-                            <div className="flex justify-between w-full p-2 bg-green-100 "><div className='text-xs font-semibold '>Making Robots</div><div></div></div>
-                            <div className="flex justify-between w-full p-2 bg-white"><div className='text-xs font-semibold'>Making Robots</div><div></div></div>
-                        </div>
-                        
-                    </div>
+                    <CareerPathAssessmentCard
+                        register={register}
+                        question="Which of these subjects would you
+                    most like to take a class in?"
+                        optionA="Math"
+                        optionB="English"
+                        optionC="Physics"
+                        id="Question2"
+                        onclick={(e: any) =>{setQuestion2(e.target.value);setPercentage(65)}}
+                        value={question2}
+                    />
 
+                    <CareerPathAssessmentCard
+                        register={register}
+                        question="Which of these subjects would you
+                    most like to take a class in?"
+                        optionA="Math"
+                        optionB="English"
+                        optionC="Physics"
+                        id="Question3"
+                        onclick={(e: any) =>{setQuestion3(e.target.value);setPercentage(100)}}
+                        value={question3}
+                    />
+{console.log(percentage)}
                 </div>
 
                 <div className="px-4 pt-4">
@@ -129,7 +142,7 @@ const AssessmentPage: NextPage = () => {
         By creating an account you agree to LearnAli’s <span className="text-green-400">Terms of Service</span>&nbsp;
 and <span className="text-green-400">Privacy Policy</span>
         </div>
-        <div className="my-2 text-sm">We are Hiring ⚡️ <span className="text-green-400">Join Us</span></div>
+        <div className="my-2 text-sm">We are Hiborder ⚡️ <span className="text-green-400">Join Us</span></div>
         
       </div> */}
             {/* <div className="fixed bottom-0 left-0">

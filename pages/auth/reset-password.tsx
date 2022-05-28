@@ -74,7 +74,7 @@ const ResetPasswordPage: NextPage = () => {
         By creating an account you agree to LearnAli’s <span className="text-green-400">Terms of Service</span>&nbsp;
 and <span className="text-green-400">Privacy Policy</span>
         </div>
-        <div className="my-2 text-sm">We are Hiring ⚡️ <span className="text-green-400">Join Us</span></div>
+        <div className="my-2 text-sm">We are Hiborder ⚡️ <span className="text-green-400">Join Us</span></div>
         
       </div>
       </div>
@@ -141,7 +141,7 @@ and <span className="text-green-400">Privacy Policy</span>
         By creating an account you agree to LearnAli’s <span className="text-green-400">Terms of Service</span>&nbsp;
 and <span className="text-green-400">Privacy Policy</span>
         </div>
-        <div className="my-2 text-sm">We are Hiring ⚡️ <span className="text-green-400">Join Us</span></div>
+        <div className="my-2 text-sm">We are Hiborder ⚡️ <span className="text-green-400">Join Us</span></div>
         
       </div>
       </div>
