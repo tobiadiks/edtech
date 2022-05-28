@@ -17,7 +17,7 @@ const CertProgressCard = (props: {
                 </div>
                 <div className="mt-2 w-full ">
                     <div className="flex">
-                        <div className="h-12 w-12 border-2 rounded-full border-green-400 bg-green-50"></div>
+                        <div className="h-12 w-12 ring-2 rounded-full ring-green-400 bg-green-50"></div>
                         <div className="my-auto px-1">
                             <div className="text-sm">Building Systems in Go</div>
                             <div className="text-xs text-gray-400">15% Left</div>
@@ -25,7 +25,7 @@ const CertProgressCard = (props: {
                     </div>
 
                     <div className="flex mt-1 w-full">
-                        <div className="h-12 w-12 border-2 rounded-full border-green-400 bg-green-50"></div>
+                        <div className="h-12 w-12 ring-2 rounded-full ring-green-400 bg-green-50"></div>
                         <div className="my-auto px-1">
                             <div className="text-sm">Arch. Math for Designers</div>
                             <div className="text-xs text-gray-400">65% Left</div>
