@@ -6,7 +6,7 @@ const InstructorDetailPage: NextPage = () => {
     return (
         <>
             <HeaderNavigation />
-            <div className="w-full font-inter min-h-screen  mt-16 flex flex-col px-4 md:px-4 lg:px-8">
+            <div className="w-full font-inter min-h-screen  lg:mt-16 mt-28 flex flex-col px-4 md:px-4 lg:px-8">
                 <div className="flex flex-col mt-4 lg:flex-row">
                     <div className="lg:w-1/2 w-full lg:pr-8">
                         {/* instructor bio */}
@@ -132,9 +132,9 @@ const InstructorDetailPage: NextPage = () => {
                     </div>
 
                     <div className="lg:w-1/2 w-full">
-                    <div className="my-8">
+                    <div className="my-0">
                             <div className="flex justify-between">
-                                <div>
+                                <div className="w-3/5">
                                     <div className="font-semibold">Top Rated Courses</div>
                                     <div className="text-sm text-gray-400">These are the most enrolled courses by our commuinity</div>
                                 </div>
@@ -152,7 +152,7 @@ const InstructorDetailPage: NextPage = () => {
                         
                         <div className="my-8">
                             <div className="flex justify-between">
-                                <div>
+                                <div className="w-3/5">
                                     <div className="font-semibold">Jacob&apos;s Courses</div>
                                     <div className="text-sm text-gray-400">These are courses you are currently enrolled in</div>
                                 </div>
