@@ -16,7 +16,6 @@ deploy-staging:
     - main
   script:
     - ssh $SSH_USER@$SSH_HOST "pwd && cd /www/wwwroot/stagings/learnali-frontend/ && git pull && npm install && npm run build"
-    
 
 # deploy-prod:
 #   stage: deploy
