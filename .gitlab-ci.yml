@@ -13,7 +13,7 @@ deploy-staging:
   - ssh-keyscan $SSH_HOST >> ~/.ssh/known_hosts
   - chmod 644 ~/.ssh/known_hosts
   only:
-    - dev
+    - main
   script:
     - ssh $SSH_USER@$SSH_HOST "pwd && cd /www/wwwroot/stagings/learnali-frontend/ && git pull && npm install && npm run build"
 
