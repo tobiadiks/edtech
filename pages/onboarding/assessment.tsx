@@ -88,7 +88,7 @@ const AssessmentPage: NextPage = () => {
                     <div className="flex justify-between font-semibold text-sm"><div className="cursor-pointer">Previous</div>
                         <div className="text-green-400 cursor-pointer">Next Question</div></div>
                     <div className="w-full mt-2 relative h-1 rounded bg-green-100">
-                        <div className={`absolute top-0 left-0 bg-green-400 w-[${percentage.toFixed(0)}%] h-1`}></div>
+                        <div className={`absolute top-0 left-0 bg-green-400 w-1/2 h-1`}></div>
                     </div>
                 </div>
                 <div className="flex my-4 snap-x px-4 snap-mandatory space-x-4 w-full    no-scrollbar overflow-x-scroll">

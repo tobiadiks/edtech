@@ -148,6 +148,7 @@ and <span className="text-green-400">Privacy Policy</span>
 <div className="fixed bottom-0 left-0">
       <div className="relative w-32 lg:w-64">
         <Image
+        alt="Charco-Education"
         src={'/Charco-Education.png'}
         layout='responsive'
         height={316}
@@ -159,6 +160,7 @@ and <span className="text-green-400">Privacy Policy</span>
       <div className="fixed bottom-0 right-0">
       <div className="relative w-32 lg:w-64">
         <Image
+        alt="Charco-Direction"
         src={'/Charco-Directions.png'}
         layout='responsive'
         height={316}
