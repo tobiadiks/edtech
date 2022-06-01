@@ -1,0 +1,33 @@
+image: alpine:latest
+stages:
+  - deploy
+
+deploy-staging:
+  stage: deploy
+  before_script:
+  - 'command -v ssh-agent >/dev/null || ( apk add --update openssh )'
+  - eval $(ssh-agent -s)
+  - echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add -
+  - mkdir -p ~/.ssh
+  - chmod 700 ~/.ssh
+  - ssh-keyscan $SSH_HOST >> ~/.ssh/known_hosts
+  - chmod 644 ~/.ssh/known_hosts
+  only:
+    - candy
+  script:
+    - ssh $SSH_USER@$SSH_HOST "pwd && cd /www/wwwroot/stagings/learnali-frontend/ && git pull && npm install && npm run build && npx next export"
+
+# deploy-prod:
+#   stage: deploy
+#   before_script:
+#   - 'command -v ssh-agent >/dev/null || ( apk add --update openssh )'
+#   - eval $(ssh-agent -s)
+#   - echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add -
+#   - mkdir -p ~/.ssh
+#   - chmod 700 ~/.ssh
+#   - ssh-keyscan $SSH_HOST >> ~/.ssh/known_hosts
+#   - chmod 644 ~/.ssh/known_hosts
+#   only:
+#     - master
+#   script:
+#     - ssh $SSH_USER@$SSH_HOST "pwd && cd /www/wwwroot/stagings/learnali-frontend/ && git pull && npm install && npm run build"
