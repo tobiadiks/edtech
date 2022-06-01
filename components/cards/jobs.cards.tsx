@@ -1,6 +1,6 @@
 const JobCard=()=>{
     return(
-<div className="border border-black rounded-md p-4">
+<div className="border border-gray-400 rounded-md p-4">
               <div className="flex">
                 <div className="h-12 w-12 bg-black rounded-full"></div>
                 <div className="ml-4">

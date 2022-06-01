@@ -23,7 +23,7 @@ const DashBoardPage: NextPage = () => {
   return (
     <>
       <HeaderNavigation />
-      <div className="w-full font-inter min-h-screen  mt-16 flex flex-col px-4 md:px-4 lg:px-8">
+      <div className="w-full font-inter min-h-screen mt-28 lg:mt-16 flex flex-col px-4 md:px-4 lg:px-8">
         {/* <div className="flex flex-col  w-full mt-4"> */}
         {/* <div className=" flex flex-col">
             <div className="font-semibold text-black">
