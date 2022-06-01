@@ -256,7 +256,7 @@ const CareerSummaryPage: NextPage = () => {
 
                                 <div className="w-full flex">
                                     <div className="border rounded-md w-fit h-fit my-auto p-1">
-                                        <div>Course Duration</div>
+                                        <div className="text-sm">Course Duration</div>
                                         <div className="text-xs">
                                             12wks&nbsp;<span className="text-gray-400">Feb - April 2022</span>
                                         </div>

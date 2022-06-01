@@ -13,7 +13,7 @@ const CurrentCourseCard = (props: {
                     {props.started ?
                         <div className="h-8 w-8  md:mx-0 ring-2 ring-green-400 bg-white my-auto rounded-full md:mr-2"></div>
                         :
-                        <div className="font-semibold  text-sm cursor-pointer mb-2 mr-2 ">START</div>
+                        <div className="font-semibold  text-sm cursor-pointer mb-2 mr-2 bg-white px-2 py-1 rounded-full">START</div>
                     }
 
                     {/* <div className="font-semibold my-auto text-sm cursor-pointer">ENROLL</div> */}

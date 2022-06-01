@@ -72,8 +72,8 @@ const InstructorMoreDetailPage: NextPage = () => {
                                 </div>
 
                                 <div className="my-4 w-full grid grid-cols-1 gap-4 first-letter: md:grid-cols-2 lg:grid-cols-2 ">
-                                    <div className=" h-44 w-full border rounded-md border-gray-400"></div>
-                                    <div className=" h-44 w-full border rounded-md border-gray-400"></div>
+                                    <div className=" h-44 w-full border rounded-md border-gray-400 bg-green-50"></div>
+                                    <div className=" h-44 w-full border rounded-md border-gray-400 bg-green-50"></div>
 
                                 </div>
                             </div>
