@@ -17,7 +17,7 @@ interface IFormInput {
 const ForgotPasswordPage: NextPage = () => {
   const route = useRouter();
   const { register, handleSubmit, setError, formState } = useForm<IFormInput>();
-  const onsubmit: SubmitHandler<IFormInput> = (data) => console.log(data);
+  const onsubmit: SubmitHandler<IFormInput> = (data) => {console.log(data);route.push('/auth/reset-password')};
   return (
     <div className="w-full min-h-screen flex font-inter flex-col my-8 md:my-11 justify-center align-middle px-4 md:px-6">
       <div className="w-full">
@@ -73,7 +73,7 @@ const ForgotPasswordPage: NextPage = () => {
         By creating an account you agree to LearnAli’s <span className="text-green-400">Terms of Service</span>&nbsp;
 and <span className="text-green-400">Privacy Policy</span>
         </div>
-        <div className="my-2 text-sm">We are Hiborder ⚡️ <span className="text-green-400">Join Us</span></div>
+        <div className="my-2 text-sm">We are Hiring ⚡️ <span className="text-green-400">Join Us</span></div>
         
       </div>
     </div>

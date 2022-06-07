@@ -6,9 +6,12 @@ import HeaderNavigation from "@components/navigations/header.navigation";
 import SecondaryButton from "@components/buttons/secondary.button";
 import CareerPathSummaryCard from "@components/cards/careerpathsummary.card";
 import RecommendedPathCard from "@components/cards/recommendedpathcard";
+import { useRouter } from "next/router";
 
 //onboard the user to pick a career
 const CareerSummaryPage: NextPage = () => {
+    const route = useRouter();
+    
     return (
         <>
             <HeaderNavigation />
@@ -34,12 +37,13 @@ const CareerSummaryPage: NextPage = () => {
 
                     <div className="w-full relative lg:w-2/3 gap-4 lg:h-screen overflow-y-auto space-y-4 lg:space-y-0 snap-y snap-mandatory lg:grid grid-cols-2 no-scrollbar   mx-auto pb-8">
                         {/* card */}
-                    <RecommendedPathCard active/>
-                    <RecommendedPathCard/>
-                    <RecommendedPathCard active/>
-                    <RecommendedPathCard/>
-                    <RecommendedPathCard/>
-                    <RecommendedPathCard active/>
+                    <RecommendedPathCard route={()=>route.push('/course/overview')} active/>
+                    <RecommendedPathCard route={()=>route.push('/course/overview')}/>
+                    <RecommendedPathCard active route={()=>route.push('/course/overview')}/>
+                    <RecommendedPathCard route={()=>route.push('/course/overview')}/>
+                    <RecommendedPathCard route={()=>route.push('/course/overview')}/>
+                    <RecommendedPathCard route={()=>route.push('/course/overview')}/>
+                    <RecommendedPathCard active route={()=>route.push('/course/overview')}/>
 
                     </div>
 

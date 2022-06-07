@@ -14,35 +14,28 @@ import SecondaryButton from "@components/buttons/secondary.button";
 import Image from "next/image";
 import CareerPathAssessmentCard from "@components/cards/careerpathassessment.card";
 
-interface IFormInput {
-    email: String;
-    password: String;
-}
+// interface IFormInput {
+//     email: String;
+//     password: String;
+// }
 const AssessmentPage: NextPage = () => {
-    const [question1,setQuestion1]=React.useState('')
-    const [question2,setQuestion2]=React.useState('')
-    const [question3,setQuestion3]=React.useState('')
-    const [percentage,setPercentage]=React.useState(0)
+    const [question1, setQuestion1] = React.useState('')
+    const [question2, setQuestion2] = React.useState('')
+    const [question3, setQuestion3] = React.useState('')
+    const [page, setPage] = React.useState(1)
 
     const route = useRouter();
     const validateSchema = Yup.object().shape({
-        email: Yup.string().required("Email is required"),
-        password: Yup.string().required("Password is required"),
+        Question1: Yup.string().required(),
+        Question2: Yup.string().required(),
+        Question3: Yup.string().required(),
     });
     const formOptions = { resolver: yupResolver(validateSchema) };
     const { register, handleSubmit, setError, formState } = useForm(formOptions);
     const { errors } = formState;
     const onsubmit = async (data: any) => {
         console.log(data);
-
-        return useService
-            .login(JSON.stringify(data))
-            .then(() => {
-                route.push("/dashboard");
-            })
-            .catch((error) => {
-                setError("email", { message: 'error' });
-            });
+        route.push('/onboarding/summary')
     };
 
     return (
@@ -61,10 +54,7 @@ const AssessmentPage: NextPage = () => {
             </div>
             {/* {errors.email?.message} */}
             <form
-                onSubmit={handleSubmit((data) => {
-                    console.log(data)
-                    // onsubmit(data)
-                })}
+                onSubmit={handleSubmit(onsubmit)}
                 className="w-full relative md:w-1/2 shadow  bg-white lg:w-1/3 py-4 border border-green-400 rounded-lg  mx-auto"
             >
                 <div className="flex justify-between px-4">
@@ -83,10 +73,20 @@ const AssessmentPage: NextPage = () => {
                             </div>
                         </div>
                     </div>
-                </div>
+                </div>{console.log(page)}
                 <div className="w-full px-4 mt-2">
-                    <div className="flex justify-between font-semibold text-sm"><div className="cursor-pointer">Previous</div>
-                        <div className="text-green-400 cursor-pointer">Next Question</div></div>
+                    <div className="flex justify-between font-semibold text-sm"><div onClick={(e: any) => {
+                        if (page >= 1) {
+                            setPage((v) => v-=1)
+                            route.push(`#Question${page}`)
+                        }
+                    }} className="cursor-pointer">Previous</div>
+                        <div onClick={(e: any) => {
+                            if (page <= 3) {
+                                setPage((v) => v+=1)
+                                route.push(`#Question${page}`)
+                            }
+                        }} className="text-green-400 cursor-pointer">Next Question</div></div>
                     <div className="w-full mt-2 relative h-1 rounded bg-green-100">
                         <div className={`absolute top-0 left-0 bg-green-400 w-1/2 h-1`}></div>
                     </div>
@@ -95,13 +95,14 @@ const AssessmentPage: NextPage = () => {
 
                     <CareerPathAssessmentCard
                         register={register}
+                        color='bg-red-100'
                         question="Which of these subjects would you
                     most like to take a class in?"
                         optionA="Math"
                         optionB="English"
                         optionC="Physics"
                         id="Question1"
-                        onclick={(e: any) =>{setQuestion1(e.target.value);setPercentage(33)}}
+                        onclick={(e: any) => { route.push('#Question2') }}
                         value={question1}
                     />
 
@@ -113,7 +114,8 @@ const AssessmentPage: NextPage = () => {
                         optionB="English"
                         optionC="Physics"
                         id="Question2"
-                        onclick={(e: any) =>{setQuestion2(e.target.value);setPercentage(65)}}
+                        color="bg-yellow-100"
+                        onclick={(e: any) => { route.push('#Question3') }}
                         value={question2}
                     />
 
@@ -125,16 +127,16 @@ const AssessmentPage: NextPage = () => {
                         optionB="English"
                         optionC="Physics"
                         id="Question3"
-                        onclick={(e: any) =>{setQuestion3(e.target.value);setPercentage(100)}}
+                        onclick={(e: any) => { route.push('#Question3') }}
                         value={question3}
                     />
-{console.log(percentage)}
+
                 </div>
 
                 <div className="px-4 pt-4">
-                    <SecondaryButton type={'button'} title={'Reveal Suggested Path'} />
+                    <SecondaryButton type={'submit'} title={'Reveal Suggested Path'} />
                 </div>
-                <div className="text-sm mx-auto w-fit">Skip, I have a Path</div>
+                <div onClick={()=>route.push('/dashboard')} className="text-sm cursor-pointer mx-auto w-fit">Skip, I have a Path</div>
             </form>
 
             {/* <div className="w-full mx-auto md:w-1/2 lg:w-1/3">

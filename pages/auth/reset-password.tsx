@@ -10,6 +10,7 @@ import OtpInput from "@components/inputs/otp.input";
 import Link from "next/link";
 import { useForm, SubmitHandler } from "react-hook-form";
 import LoadingButton from "@components/buttons/loading.button";
+import { useRouter } from "next/router";
 
 interface IFormInput {
   email:String;
@@ -17,9 +18,14 @@ interface IFormInput {
   
 }
 const ResetPasswordPage: NextPage = () => {
+  const route = useRouter();
   const [isVerified, setIsVerified] = React.useState(false);
   const { register, handleSubmit, formState,setError } = useForm<IFormInput>();
-  const onsubmit: SubmitHandler<IFormInput> = (data) => console.log(data);
+  const onsubmit: SubmitHandler<IFormInput> = (data) => {console.log(data);
+  setIsVerified(true)};
+
+  const onreset: SubmitHandler<IFormInput> = (data) => {console.log(data);
+    route.push('/dashboard')};
 
   if (!isVerified) {
     return (
@@ -47,7 +53,7 @@ const ResetPasswordPage: NextPage = () => {
          
         </div>
 
-        <form className="w-full md:w-1/2 shadow transform -translate-y-2 bg-white lg:w-1/3 p-4 border rounded-lg  mx-auto">
+        <form onSubmit={handleSubmit(onsubmit)} className="w-full md:w-1/2 shadow transform -translate-y-2 bg-white lg:w-1/3 p-4 border rounded-lg  mx-auto">
         <div className="  w-full text-sm  mx-auto font-semibold">
             Enter Password Code Here
           </div>
@@ -55,16 +61,15 @@ const ResetPasswordPage: NextPage = () => {
             Check your email for the code or click the link in your email
           </div>
           <OtpInput
-            label="Email Address"
-            placeholder="Enter your email address"
+            label="OTP"
+            placeholder="Enter your OTP"
             type="text"
+            register={register}
             required
           />
 
           <SecondaryButton
-            onclick={() => {
-              setIsVerified(true);
-            }}
+            
             type={"submit"}
             title={"Reset Password"}
           />
@@ -74,7 +79,7 @@ const ResetPasswordPage: NextPage = () => {
         By creating an account you agree to LearnAli’s <span className="text-green-400">Terms of Service</span>&nbsp;
 and <span className="text-green-400">Privacy Policy</span>
         </div>
-        <div className="my-2 text-sm">We are Hiborder ⚡️ <span className="text-green-400">Join Us</span></div>
+        <div className="my-2 text-sm">We are Hiring ⚡️ <span className="text-green-400">Join Us</span></div>
         
       </div>
       </div>
@@ -106,7 +111,7 @@ and <span className="text-green-400">Privacy Policy</span>
         </div>
 
         <form
-          onSubmit={handleSubmit(onsubmit)}
+          onSubmit={handleSubmit(onreset)}
           className="w-full md:w-1/2 shadow transform -translate-y-2 bg-white lg:w-1/3 p-4 border rounded-lg  mx-auto"
         >
           <div className=" w-full mx-auto text-sm font-semibold">
@@ -141,7 +146,7 @@ and <span className="text-green-400">Privacy Policy</span>
         By creating an account you agree to LearnAli’s <span className="text-green-400">Terms of Service</span>&nbsp;
 and <span className="text-green-400">Privacy Policy</span>
         </div>
-        <div className="my-2 text-sm">We are Hiborder ⚡️ <span className="text-green-400">Join Us</span></div>
+        <div className="my-2 text-sm">We are Hiring ⚡️ <span className="text-green-400">Join Us</span></div>
         
       </div>
       </div>

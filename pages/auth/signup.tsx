@@ -31,7 +31,7 @@ const SignUpPage: NextPage = () => {
     return useService
       .signup(JSON.stringify(data))
       .then(() => {
-        route.push("/onboarding/career-path");
+        route.push("/onboarding/assessment");
       })
       .catch((error) => {
         setError("email", { message: error });

@@ -1,7 +1,8 @@
 import SecondaryButton from "@components/buttons/secondary.button"
 
 const RecommendedPathCard = (props: {
-    active?: boolean
+    active?: boolean;
+    route?:any
 }) => {
     return (
         <div className="shadow bg-white  py-4 px-4 border border-green-400 rounded-lg">
@@ -35,7 +36,7 @@ const RecommendedPathCard = (props: {
 
             <div>
                 <div className="font-semibold">Path Overview</div>
-                <div className="text-sm my-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum quis earum eum dolorum aliquid quasi deserunt, neque ulla...<span className="text-green-400">Read more</span></div>
+                <div className="text-sm my-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum quis earum eum dolorum aliquid quasi deserunt, neque ulla...<span onClick={props.route} className="text-green-400 cursor-pointer">Read more</span></div>
             </div>
 
             {props.active ? <div className="lg:grid grid-cols-3 gap-2 flex justify-between">
