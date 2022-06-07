@@ -15,7 +15,7 @@ deploy-staging:
   only:
     - candy
   script:
-    - ssh $SSH_USER@$SSH_HOST "pwd && cd /www/wwwroot/stagings/learnali-frontend/ && git stash --include-untracked --keep-index && git pull && npm install && npm run build && npx next export"
+    - ssh $SSH_USER@$SSH_HOST "pwd && cd /www/wwwroot/stagings/learnali-frontend/ && git stash --include-untracked --keep-index && git pull && npm install && npm run build " #&& npx next export"
 
 # deploy-prod:
 #   stage: deploy
