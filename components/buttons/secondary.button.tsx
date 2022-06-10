@@ -10,7 +10,7 @@ const SecondaryButton = (props: {
     <button
       onClick={props.onclick}
       type={props.type ? props.type : "button"}
-      className="bg-white hover:shadow-lg shadow-green-200 my-4 font-inter focus:outline-none  p-4 text-center border border-green-400 text-green-400 rounded-lg font-semibold w-full"
+      className="bg-white hover:shadow-lg shadow-emerald-200 my-4 font-inter focus:outline-none  p-4 text-center border border-emerald-400 text-emerald-400 rounded-lg font-semibold w-full"
     >
       {props.title}
     </button>

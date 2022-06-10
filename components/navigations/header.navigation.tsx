@@ -14,12 +14,12 @@ const HeaderNavigation: NextPage = () => {
           </Link>
         </div>
 
-        <div className="col-span-1 flex hover:bg-green-100 border-l py-2  px-2 my-auto h-full">
+        <div className="col-span-1 flex hover:bg-emerald-100 border-l py-2  px-2 my-auto h-full">
           <div className="my-auto">
           <div className="font-semibold text-xs text-gray-400">
             Wallet Balance
           </div>
-          <div className={cn(" font-semibold text-sm", true ? 'text-green-400' : 'text-black')}>NGN {true ? '78,900' : 'N/A'}</div>
+          <div className={cn(" font-semibold text-sm", true ? 'text-emerald-400' : 'text-black')}>NGN {true ? '78,900' : 'N/A'}</div>
         </div></div>
 
         <div className="col-span-1 border-l py-2  px-2 my-auto flex h-full">

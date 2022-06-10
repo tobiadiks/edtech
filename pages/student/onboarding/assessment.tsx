@@ -6,7 +6,7 @@ import PasswordInput from "@components/inputs/password.input";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useForm, SubmitHandler } from "react-hook-form";
-import { useService } from "services/user.service";
+import { useService } from "services/user/user.service";
 import LoadingButton from "@components/buttons/loading.button";
 import * as Yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
@@ -55,7 +55,7 @@ const AssessmentPage: NextPage = () => {
             {/* {errors.email?.message} */}
             <form
                 onSubmit={handleSubmit(onsubmit)}
-                className="w-full relative md:w-1/2 shadow  bg-white lg:w-1/3 py-4 border border-green-400 rounded-lg  mx-auto"
+                className="w-full relative md:w-1/2 shadow  bg-white lg:w-1/3 py-4 border border-emerald-400 rounded-lg  mx-auto"
             >
                 <div className="flex justify-between px-4">
                     <div>
@@ -86,9 +86,9 @@ const AssessmentPage: NextPage = () => {
                                 setPage((v) => v+=1)
                                 route.push(`#Question${page}`)
                             }
-                        }} className="text-green-400 cursor-pointer">Next Question</div></div>
-                    <div className="w-full mt-2 relative h-1 rounded bg-green-100">
-                        <div className={`absolute top-0 left-0 bg-green-400 w-1/2 h-1`}></div>
+                        }} className="text-emerald-400 cursor-pointer">Next Question</div></div>
+                    <div className="w-full mt-2 relative h-1 rounded bg-emerald-100">
+                        <div className={`absolute top-0 left-0 bg-emerald-400 w-1/2 h-1`}></div>
                     </div>
                 </div>
                 <div className="flex my-4 snap-x px-4 snap-mandatory space-x-4 w-full    no-scrollbar overflow-x-scroll">
@@ -141,10 +141,10 @@ const AssessmentPage: NextPage = () => {
 
             {/* <div className="w-full mx-auto md:w-1/2 lg:w-1/3">
       <div className="my-2 text-sm">
-        By creating an account you agree to LearnAli’s <span className="text-green-400">Terms of Service</span>&nbsp;
-and <span className="text-green-400">Privacy Policy</span>
+        By creating an account you agree to LearnAli’s <span className="text-emerald-400">Terms of Service</span>&nbsp;
+and <span className="text-emerald-400">Privacy Policy</span>
         </div>
-        <div className="my-2 text-sm">We are Hiborder ⚡️ <span className="text-green-400">Join Us</span></div>
+        <div className="my-2 text-sm">We are Hiborder ⚡️ <span className="text-emerald-400">Join Us</span></div>
         
       </div> */}
             {/* <div className="fixed bottom-0 left-0">

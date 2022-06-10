@@ -20,7 +20,7 @@ const UserCoursePage: NextPage = () => {
                             <div className="font-semibold">Your Courses</div>
                             <div className="text-sm text-gray-400">These are courses you are currently taking based on your <span className="text-black">path</span></div>
                         </div>
-                        <div className="font-semibold cursor-pointer text-green-400 my-auto">See all</div>
+                        <div className="font-semibold cursor-pointer text-emerald-400 my-auto">See all</div>
                     </div>
 
                     <div className="mt-4 w-full grid grid-cols-1  lg:grid-cols-6 ">
@@ -41,7 +41,7 @@ const UserCoursePage: NextPage = () => {
                             <div className="font-semibold">Saved Courses</div>
                             <div className="text-sm text-gray-400">These are courses you have saved but not yet enrolled in</div>
                         </div>
-                        <div className="font-semibold cursor-pointer text-green-400 my-auto">See all</div>
+                        <div className="font-semibold cursor-pointer text-emerald-400 my-auto">See all</div>
                     </div>
 
                     <div className="mt-4 w-full grid grid-cols-1  lg:grid-cols-6 ">
@@ -65,7 +65,7 @@ const UserCoursePage: NextPage = () => {
                             <div className="font-semibold">Suggested Courses</div>
                             <div className="text-sm text-gray-400">These are courses you have saved but not yet enrolled in</div>
                         </div>
-                        <div className="font-semibold cursor-pointer text-green-400 my-auto">See all</div>
+                        <div className="font-semibold cursor-pointer text-emerald-400 my-auto">See all</div>
                     </div>
 
                     <div className="mt-4 w-full grid grid-cols-1  lg:grid-cols-6 ">

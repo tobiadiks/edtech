@@ -34,7 +34,7 @@ const ForgotPasswordPage: NextPage = () => {
             </div>
           </Link>
           <Link href={"/auth/login"} passHref>
-            <div className="border-y border-l-green-400 bg-green-100 text-green-400 border-green-400  border-x px-2 py-4 rounded-r-lg text-center w-1/2 cursor-pointer">
+            <div className="border-y border-l-emerald-400 bg-emerald-100 text-emerald-400 border-emerald-400  border-x px-2 py-4 rounded-r-lg text-center w-1/2 cursor-pointer">
               Login
             </div>
           </Link>
@@ -70,10 +70,10 @@ const ForgotPasswordPage: NextPage = () => {
       </form>
       <div className="w-full mx-auto md:w-1/2 lg:w-1/3">
       <div className="my-2 text-sm">
-        By creating an account you agree to LearnAli’s <span className="text-green-400">Terms of Service</span>&nbsp;
-and <span className="text-green-400">Privacy Policy</span>
+        By creating an account you agree to LearnAli’s <span className="text-emerald-400">Terms of Service</span>&nbsp;
+and <span className="text-emerald-400">Privacy Policy</span>
         </div>
-        <div className="my-2 text-sm">We are Hiring ⚡️ <span className="text-green-400">Join Us</span></div>
+        <div className="my-2 text-sm">We are Hiring ⚡️ <span className="text-emerald-400">Join Us</span></div>
         
       </div>
     </div>

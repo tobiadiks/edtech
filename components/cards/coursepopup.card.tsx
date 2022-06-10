@@ -5,8 +5,8 @@ const CoursePopUp = (props: { onclose?: any }) => {
         <div onClick={props.onclose} className="w-full h-full bg-[#ffffffef] left-0 z-30 absolute lg:p-2 p-4  top-0 md:top-0 lg:top-0">
             {/* card */}
             <div className="relative z-40 mt-8 md:w-1/2 lg:w-1/2 w-full mx-auto">
-                <div className="border border-green-100 rounded-lg bg-white p-4">
-                    <div className="w-full h-32 bg-green-100 rounded-lg"></div>
+                <div className="border border-emerald-100 rounded-lg bg-white p-4">
+                    <div className="w-full h-32 bg-emerald-100 rounded-lg"></div>
                     <div className="flex my-4">
                         <div className=" font-extrabold text-md w-full ">Applying Heuristic Evaluations In Your Next Design Project </div>
                         <div className="border rounded-md w-full h-fit ml-2 my-auto p-1">
@@ -55,7 +55,7 @@ const CoursePopUp = (props: { onclose?: any }) => {
                                         <div className="mt-2 font-bold">Introduction to Heurestics</div>
                                     </div>
                                 </div>
-                                <div className="text-green-400 font-bold text-xs my-auto">12/12 Lessons</div>
+                                <div className="text-emerald-400 font-bold text-xs my-auto">12/12 Lessons</div>
                             </li>
                             <li className="py-2 flex justify-between">
                                 <div className="flex">
@@ -65,7 +65,7 @@ const CoursePopUp = (props: { onclose?: any }) => {
                                         <div className="mt-2 font-bold">Introduction to Heurestics</div>
                                     </div>
                                 </div>
-                                <div className="text-green-400 font-bold text-xs my-auto">12/12 Lessons</div>
+                                <div className="text-emerald-400 font-bold text-xs my-auto">12/12 Lessons</div>
                             </li>
                             <li className="py-2 flex justify-between">
                                 <div className="flex">
@@ -75,7 +75,7 @@ const CoursePopUp = (props: { onclose?: any }) => {
                                         <div className="mt-2 font-bold">Introduction to Heurestics</div>
                                     </div>
                                 </div>
-                                <div className="text-green-400 font-bold text-xs my-auto">12/12 Lessons</div>
+                                <div className="text-emerald-400 font-bold text-xs my-auto">12/12 Lessons</div>
                             </li>
                         </ul>
                     </div>
@@ -83,7 +83,7 @@ const CoursePopUp = (props: { onclose?: any }) => {
                         <PrimaryButton type={'button'} title="Begin Learning" />
                     </div>
                 </div>
-                <div className="h-3 w-1/2 absolute bottom-1/3 blur-2xl left-1/2 transform -translate-x-1/2 -z-10 bg-green-300"></div>
+                <div className="h-3 w-1/2 absolute bottom-1/3 blur-2xl left-1/2 transform -translate-x-1/2 -z-10 bg-emerald-300"></div>
             </div>
         </div>
     );

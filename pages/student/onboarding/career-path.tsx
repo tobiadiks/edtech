@@ -14,7 +14,7 @@ const CareerPathPage: NextPage = () => {
           <div className=" flex flex-col">
             <div className="font-semibold text-black">
               Let&apos;s find you a{" "}
-              <span className="text-green-400 font-bold">Career Path</span>
+              <span className="text-emerald-400 font-bold">Career Path</span>
             </div>
             <div className="font-semibold text-xs text-gray-400">
               The very last step before you head in
@@ -22,13 +22,13 @@ const CareerPathPage: NextPage = () => {
           </div>
 
           <div className="mx-0 lg:mx-8 flex flex-wrap lg:flex-nowrap flex-row mt-2 md:mt-0">
-            <div className="mx-1 md:mx-2 h-fit  cursor-pointer font-semibold text-sm text-center p-2 rounded-2xl bg-green-100 border-0">
+            <div className="mx-1 md:mx-2 h-fit  cursor-pointer font-semibold text-sm text-center p-2 rounded-2xl bg-emerald-100 border-0">
             Engineering
             </div>
-            <div className="mx-1 md:mx-2 h-fit border cursor-pointer font-semibold text-sm text-center p-2 rounded-2xl active:bg-green-100 active:border-0">
+            <div className="mx-1 md:mx-2 h-fit border cursor-pointer font-semibold text-sm text-center p-2 rounded-2xl active:bg-emerald-100 active:border-0">
               Creative
             </div>
-            <div className="mx-1 md:mx-2 h-fit border cursor-pointer font-semibold text-sm text-center p-2 rounded-2xl active:bg-green-100 active:border-0">
+            <div className="mx-1 md:mx-2 h-fit border cursor-pointer font-semibold text-sm text-center p-2 rounded-2xl active:bg-emerald-100 active:border-0">
               Management
             </div>
           </div>

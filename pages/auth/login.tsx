@@ -6,7 +6,7 @@ import PasswordInput from "@components/inputs/password.input";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useForm, SubmitHandler } from "react-hook-form";
-import { useService } from "services/user.service";
+import { useService } from "services/user/user.service";
 import LoadingButton from "@components/buttons/loading.button";
 import * as Yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
@@ -55,7 +55,7 @@ const SignInPage: NextPage = () => {
             </div>
           </Link>
           <Link href={"/auth/login"} passHref>
-            <div className="border-y border-l-green-400 bg-green-100 text-green-400 border-green-400  border-x px-2 py-4 rounded-r-lg text-center w-1/2 cursor-pointer">
+            <div className="border-y border-l-emerald-400 bg-emerald-100 text-emerald-400 border-emerald-400  border-x px-2 py-4 rounded-r-lg text-center w-1/2 cursor-pointer">
               Login
             </div>
           </Link>
@@ -85,7 +85,7 @@ const SignInPage: NextPage = () => {
           required={true}
         />
         <Link href={"/auth/forgot-password"} passHref>
-          <div className="cursor-pointer text-right text-sm w-full  mx-auto font-semibold text-green-400">
+          <div className="cursor-pointer text-right text-sm w-full  mx-auto font-semibold text-emerald-400">
             Forgot Password?
           </div>
         </Link>
@@ -110,10 +110,10 @@ const SignInPage: NextPage = () => {
 
       <div className="w-full mx-auto md:w-1/2 lg:w-1/3">
       <div className="my-2 text-sm">
-        By creating an account you agree to LearnAli’s <span className="text-green-400">Terms of Service</span>&nbsp;
-and <span className="text-green-400">Privacy Policy</span>
+        By creating an account you agree to LearnAli’s <span className="text-emerald-400">Terms of Service</span>&nbsp;
+and <span className="text-emerald-400">Privacy Policy</span>
         </div>
-        <div className="my-2 text-sm">We are Hiring ⚡️ <span className="text-green-400">Join Us</span></div>
+        <div className="my-2 text-sm">We are Hiring ⚡️ <span className="text-emerald-400">Join Us</span></div>
         
       </div>
 {/* <div className="fixed bottom-0 left-0">

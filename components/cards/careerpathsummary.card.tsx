@@ -2,7 +2,7 @@ import SecondaryButton from "@components/buttons/secondary.button"
 
 const CareerPathSummaryCard=()=>{
     return(
-        <div className="w-full relative lg:w-1/3   shadow  bg-white  py-4 border border-green-400 rounded-lg  mx-auto">
+        <div className="w-full relative lg:w-1/3   shadow  bg-white  py-4 border border-emerald-400 rounded-lg  mx-auto">
         <div className="flex px-4 flex-col w-fit mx-auto">
 
             <div className=" w-8 h-8   bg-gray-300 mx-auto mb-2 rounded-full"></div>

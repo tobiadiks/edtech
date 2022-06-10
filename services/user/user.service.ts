@@ -31,7 +31,7 @@ const signup = async (body: any) => {
     );
     userSubject.next(data);
     localStorage.setItem('user', JSON.stringify(data));
-    console.log(data);
+    console.log(data.statusText);
     return data;
 }
 

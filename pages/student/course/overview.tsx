@@ -32,7 +32,7 @@ const CareerSummaryPage: NextPage = () => {
                 <div className="mt-4 w-full  ">
 
                     {/* card */}
-                    <div className="shadow relative  bg-white  lg:py-8 lg:px-8 px-4 py-4 overflow-hidden border border-green-400 rounded-lg">
+                    <div className="shadow relative  bg-white  lg:py-8 lg:px-8 px-4 py-4 overflow-hidden border border-emerald-400 rounded-lg">
                         <div className="font-bold text-xl">Visual Quality Assurance</div>
                         <div className="grid lg:grid-cols-4 grid-cols-2 my-4 lg:w-1/2 gap-2  justify-between">
                             <div className="text-xs ">
@@ -42,20 +42,20 @@ const CareerSummaryPage: NextPage = () => {
 
                             <div className="text-xs">
                                 <div>Courses</div>
-                                <div className="text-green-400">7 Courses</div>
+                                <div className="text-emerald-400">7 Courses</div>
                             </div>
 
                             <div className="text-xs">
                                 <div>Career</div>
-                                <div className="text-green-400">Beginner</div>
+                                <div className="text-emerald-400">Beginner</div>
                             </div>
 
                             <div className="text-xs">
                                 <div>Est. Completion</div>
-                                <div className="text-green-400">62 Hours</div>
+                                <div className="text-emerald-400">62 Hours</div>
                             </div>
 
-                            <div className="bg-green-400 blur-3xl h-full w-8 absolute top-0 right-0"></div>
+                            <div className="bg-emerald-400 blur-3xl h-full w-8 absolute top-0 right-0"></div>
                         </div>
 
 
@@ -71,7 +71,7 @@ const CareerSummaryPage: NextPage = () => {
                                     improved performance. You will learn from Executive Coach and UC Davis
                                     Instructor Kris Plachy, who has created and transformed dozens of teams
                                     through coaching. She will share best practices, research, tools and models
-                                    for coaching effectively.  You will learn how effective managers use coaching to establish clear expectations and accountability, how to assess performance...<span className="text-green-500">Read more</span></div>
+                                    for coaching effectively.  You will learn how effective managers use coaching to establish clear expectations and accountability, how to assess performance...<span className="text-emerald-500">Read more</span></div>
                             </div>
 
                             <div className="flex justify-between my-8">
@@ -79,7 +79,7 @@ const CareerSummaryPage: NextPage = () => {
                                 <div className="relative flex">
                                     <div className=" w-8 h-8 border border-white bg-gray-300 mx-auto mb-2 rounded-full"></div>
                                     <div className=" w-8 h-8 border absolute top-0 left-2 border-white  transform   bg-gray-300 mx-auto mb-2 rounded-full"></div>
-                                    <div className=" w-8 h-8 border absolute top-0 left-4 border-white   text-white  bg-green-400 mx-auto mb-2 rounded-full text-center text-xs flex font-semibold"><div className="mx-auto  my-auto">+2</div></div>
+                                    <div className=" w-8 h-8 border absolute top-0 left-4 border-white   text-white  bg-emerald-400 mx-auto mb-2 rounded-full text-center text-xs flex font-semibold"><div className="mx-auto  my-auto">+2</div></div>
 
                                     <div className="text-xs ml-8">
                                         <div className="text-gray-500">Path Instructors</div>
@@ -98,30 +98,30 @@ const CareerSummaryPage: NextPage = () => {
                             <div className="my-8">
                                 <div>
                                     <div className="font-semibold text-gray-500">Skills You’ll Learn</div>
-                                    <div>Machine Learning, Python Programming, Predictive Analytics, Data Processing, Data Visualization (DataViz), Python Libraries, Data Pre-Processing, Web Scraping, Big Data Products, <span className="text-green-500">and more</span></div>
+                                    <div>Machine Learning, Python Programming, Predictive Analytics, Data Processing, Data Visualization (DataViz), Python Libraries, Data Pre-Processing, Web Scraping, Big Data Products, <span className="text-emerald-500">and more</span></div>
                                 </div>
                             </div>
 
 
                             <div className="my-8">
                                 <div>
-                                    <div className="font-semibold flex justify-between"><div className="text-gray-500">Course in this Path (9)</div><div className="text-green-400">Find More Courses</div></div>
+                                    <div className="font-semibold flex justify-between"><div className="text-gray-500">Course in this Path (9)</div><div className="text-emerald-400">Find More Courses</div></div>
 
                                     <div className="mt-4 space-y-4">
                                         {/* more */}
                                         <div className="flex justify-between">
                                             <div className="flex">
-                                                <div className="h-8 w-8 bg-green-100 my-auto"></div>
+                                                <div className="h-8 w-8 bg-emerald-100 my-auto"></div>
                                                 <div className=" ml-4 my-auto"><div className="text-sm">Landing Your First VQA Role</div>
                                                     <div className="text-xs text-gray-400">21.8k Learners</div></div>
                                             </div>
 
-                                            <div className="my-auto text-green-400">Enroll</div>
+                                            <div className="my-auto text-emerald-400">Enroll</div>
                                         </div>
                                         {/* more enrolled */}
                                         <div className="flex justify-between">
                                             <div className="flex">
-                                                <div className="h-8 w-8 bg-green-100 my-auto"></div>
+                                                <div className="h-8 w-8 bg-emerald-100 my-auto"></div>
                                                 <div className=" ml-4 my-auto"><div className="text-sm">Landing Your First VQA Role</div>
                                                     <div className="text-xs text-gray-400">21.8k Learners</div></div>
                                             </div>
@@ -140,7 +140,7 @@ const CareerSummaryPage: NextPage = () => {
                                     {/* review card */}
                                     <div className=" border flex-none rounded-md snap-center w-10/12 p-2">
                                         <div className=" flex w-full">
-                                            <div className="h-8 w-8 bg-green-100 rounded-full"></div>
+                                            <div className="h-8 w-8 bg-emerald-100 rounded-full"></div>
                                             <div className="text-sm w-fit ml-4"><div>Learning new things have always been a
                                                 joy, and that has been rekindled by Learnali</div>
                                                 <div className="mt-2">
@@ -157,7 +157,7 @@ const CareerSummaryPage: NextPage = () => {
                                     {/* review card */}
                                     <div className=" border flex-none rounded-md snap-center w-10/12 p-2">
                                         <div className=" flex w-full">
-                                            <div className="h-8 w-8 bg-green-100 rounded-full"></div>
+                                            <div className="h-8 w-8 bg-emerald-100 rounded-full"></div>
                                             <div className="text-sm w-fit ml-4"><div>Learning new things have always been a
                                                 joy, and that has been rekindled by Learnali</div>
                                                 <div className="mt-2">
@@ -173,7 +173,7 @@ const CareerSummaryPage: NextPage = () => {
                                     {/* review card */}
                                     <div className=" border flex-none rounded-md snap-center w-10/12 p-2">
                                         <div className=" flex w-full">
-                                            <div className="h-8 w-8 bg-green-100 rounded-full"></div>
+                                            <div className="h-8 w-8 bg-emerald-100 rounded-full"></div>
                                             <div className="text-sm w-fit ml-4"><div>Learning new things have always been a
                                                 joy, and that has been rekindled by Learnali</div>
                                                 <div className="mt-2">
@@ -192,9 +192,9 @@ const CareerSummaryPage: NextPage = () => {
                             <div className="my-8">
                                 <div className="text-xs text-gray-400">This path is offered by <span className="text-black">Harvard Business School</span></div>
                                 <div className="my-4 flex">
-                                    <div className="w-36 h-16 bg-green-100"></div>
+                                    <div className="w-36 h-16 bg-emerald-100"></div>
                                     <div className="text-xs ml-4 w-fit">
-                                        UC Davis, one of the nation’s top-ranked research universities, is a global leader in agriculture, veterinary medicine, sustainability, environmental and biological sciences, and technology. With four colleges and six professional schools, UC Davis and... <span className="text-green-400">Read more</span>
+                                        UC Davis, one of the nation’s top-ranked research universities, is a global leader in agriculture, veterinary medicine, sustainability, environmental and biological sciences, and technology. With four colleges and six professional schools, UC Davis and... <span className="text-emerald-400">Read more</span>
                                     </div>
                                 </div>
                             </div>
@@ -209,7 +209,7 @@ const CareerSummaryPage: NextPage = () => {
                                     <div className="font-bold">How many language is this path offered in?</div>
                                 </div>
 
-                                <div className="text-xs text-right">Any more questions? Visit <span className="text-green-400">LearnAli Help Center</span></div>
+                                <div className="text-xs text-right">Any more questions? Visit <span className="text-emerald-400">LearnAli Help Center</span></div>
                             </div>
 
                         </div>
@@ -219,7 +219,7 @@ const CareerSummaryPage: NextPage = () => {
                                 <div className="font-semibold text-gray-500">What you get</div>
                                 <div className=" grid gap-4 my-4 grid-cols-2">
                                     <div className="flex">
-                                        <div className="h-4 w-4 rounded-full bg-green-100"></div>
+                                        <div className="h-4 w-4 rounded-full bg-emerald-100"></div>
                                         <div className=" ml-2 text-xs w-fit">
                                             <div className="text-gray-400">Certificate</div>
                                             <div>Available on completion</div>
@@ -228,7 +228,7 @@ const CareerSummaryPage: NextPage = () => {
                                     </div>
 
                                     <div className="flex">
-                                        <div className="h-4 w-4 rounded-full bg-green-100"></div>
+                                        <div className="h-4 w-4 rounded-full bg-emerald-100"></div>
                                         <div className=" ml-2 text-xs w-fit">
                                             <div className="text-gray-400">Available Language</div>
                                             <div>English, Dutch, Igbo, Hausa.
@@ -238,7 +238,7 @@ const CareerSummaryPage: NextPage = () => {
                                     </div>
 
                                     <div className="flex">
-                                        <div className="h-4 w-4 rounded-full bg-green-100"></div>
+                                        <div className="h-4 w-4 rounded-full bg-emerald-100"></div>
                                         <div className=" ml-2 text-xs w-fit">
                                             <div className="text-gray-400">Flexible Schedule</div>
                                             <div>Set and maintain flexible
@@ -248,7 +248,7 @@ const CareerSummaryPage: NextPage = () => {
                                     </div>
 
                                     <div className="flex">
-                                        <div className="h-4 w-4 rounded-full bg-green-100"></div>
+                                        <div className="h-4 w-4 rounded-full bg-emerald-100"></div>
                                         <div className=" ml-2 w-fit text-xs">
                                             <div className="text-gray-400">Skill level</div>
                                             <div>Some related experience required</div>

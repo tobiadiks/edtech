@@ -36,15 +36,15 @@ const DashBoardPage: NextPage = () => {
           </div> */}
 
         {/* <div className="mx-0  flex flex-wrap lg:flex-nowrap flex-row mt-2">
-            <div className="mx-1 md:mx-2 my-1 flex h-fit  cursor-pointer font-semibold text-sm text-center p-2 rounded-2xl bg-green-100 border-0">
+            <div className="mx-1 md:mx-2 my-1 flex h-fit  cursor-pointer font-semibold text-sm text-center p-2 rounded-2xl bg-emerald-100 border-0">
               <div className="h-8 w-8 bg-white md:my-auto mr-1   rounded-full border-2 border-black"></div>{" "}
               <div className="my-auto">Night Owl</div>
             </div>
-            <div className="mx-1 md:mx-2 my-1 flex h-fit  cursor-pointer font-semibold text-sm text-center p-2 rounded-2xl bg-green-100 border-0">
+            <div className="mx-1 md:mx-2 my-1 flex h-fit  cursor-pointer font-semibold text-sm text-center p-2 rounded-2xl bg-emerald-100 border-0">
               <div className="h-8 w-8 bg-white my-auto  mr-1 rounded-full border-2 border-black"></div>{" "}
               <div className="my-auto">2x Learner</div>
             </div>
-             <div className="mx-1 md:mx-2 flex h-fit  cursor-pointer font-semibold text-sm text-center p-2 rounded-2xl bg-green-100 border-0">
+             <div className="mx-1 md:mx-2 flex h-fit  cursor-pointer font-semibold text-sm text-center p-2 rounded-2xl bg-emerald-100 border-0">
             <div className="h-8 w-8 bg-white my-auto mr-1 rounded-full border-2 border-black"></div> <div className="my-auto">Night Owl</div>
             </div> 
           </div> */}
@@ -53,7 +53,7 @@ const DashBoardPage: NextPage = () => {
         <div className=" mt-4 border rounded-xl p-4">
           <div className="w-full flex justify-between">
             <div className="font-semibold">Your Career Path</div>
-            <div className="cursor-pointer font-bold flex  "><div className="text-gray-400 mr-4 text-sm">Job Readiness <span className="text-green-400">76%</span> <span className="text-black">Ready</span></div><div className="text-green-400 text-sm">Change Career Path</div></div>
+            <div className="cursor-pointer font-bold flex  "><div className="text-gray-400 mr-4 text-sm">Job Readiness <span className="text-emerald-400">76%</span> <span className="text-black">Ready</span></div><div className="text-emerald-400 text-sm">Change Career Path</div></div>
           </div>
           <div className=" text-xs text-gray-400">
             This is a breakdown of the <span className="text-black">career path</span> you are on
@@ -68,7 +68,7 @@ const DashBoardPage: NextPage = () => {
 
           <div className="w-full flex justify-between">
             <div className="font-semibold">Your Courses</div>
-            <div className="cursor-pointer font-bold text-green-400 text-sm">Find More Courses</div>
+            <div className="cursor-pointer font-bold text-emerald-400 text-sm">Find More Courses</div>
           </div>
           <div className=" text-xs text-gray-400">
             This are courses you are currently taking based on your path
@@ -87,18 +87,18 @@ const DashBoardPage: NextPage = () => {
 
         <div className={" mt-8"}>
           <div className="font-semibold">
-            Learning Stat <span className="text-green-400 text-sm cursor-pointer" onClick={() => { setStatVisible(!statVisible) }}>{statVisible ? 'Hide' : 'Show'}</span>
+            Learning Stat <span className="text-emerald-400 text-sm cursor-pointer" onClick={() => { setStatVisible(!statVisible) }}>{statVisible ? 'Hide' : 'Show'}</span>
           </div>
           <div className={cn(" flex-col md:flex-row justify-between text-sm", statVisible ? 'flex' : 'hidden')}>
             <div>Displaying your stats over time</div>
             <div className="flex justify-between  text-gray-400 mt-2 md:mt-0 ">
-              <div className="hover:text-green-400 cursor-pointer md:mx-2 active:hover:text-green-400">
+              <div className="hover:text-emerald-400 cursor-pointer md:mx-2 active:hover:text-emerald-400">
                 Today
               </div>
-              <div className="hover:text-green-400 cursor-pointer md:mx-2 text-green-400 active:hover:text-green-400">
+              <div className="hover:text-emerald-400 cursor-pointer md:mx-2 text-emerald-400 active:hover:text-emerald-400">
                 This Week
               </div>
-              <div className="hover:text-green-400 cursor-pointer md:mx-2 active:hover:text-green-400">
+              <div className="hover:text-emerald-400 cursor-pointer md:mx-2 active:hover:text-emerald-400">
                 This Month
               </div>
             </div>
@@ -119,9 +119,9 @@ const DashBoardPage: NextPage = () => {
           <div className=" bg-gradient-to-b from-[#ffffffef]  to-white flex h-full w-full absolute top-0 z-30 ">
             <div className="mx-auto my-auto w-fit">
               <div></div>
-              <div className="text-gray-400 text-center">Unlock more access with <span className="text-black font-bold">Learnali</span><span className="text-green-400 font-bold">Pro</span></div>
+              <div className="text-gray-400 text-center">Unlock more access with <span className="text-black font-bold">Learnali</span><span className="text-emerald-400 font-bold">Pro</span></div>
            <div className="font-bold text-center my-2">Starting from just $3.99 Monthly</div>
-            <div className="text-sm text-center text-green-400 cursor-pointer font-semibold">See Benefits</div>
+            <div className="text-sm text-center text-emerald-400 cursor-pointer font-semibold">See Benefits</div>
             </div>
           </div>
           <div className="font-semibold">

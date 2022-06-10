@@ -10,12 +10,12 @@ const JobCard=()=>{
               </div>
               <div className="flex mt-4">
                 <div className=" flex mr-4">
-<div className="h-4 w-4 bg-green-200 rounded-full my-auto mr-2"></div>
+<div className="h-4 w-4 bg-emerald-200 rounded-full my-auto mr-2"></div>
 <div className="font-semibold">Worldwide, Remote</div>
                 </div>
 
                 <div className="flex">
-<div className="h-4 w-4 bg-green-200 rounded-full my-auto mr-2"></div>
+<div className="h-4 w-4 bg-emerald-200 rounded-full my-auto mr-2"></div>
 <div className="font-semibold">Hybrid</div>
                 </div>
               </div>

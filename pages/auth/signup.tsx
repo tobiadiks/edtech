@@ -8,10 +8,11 @@ import DualInput from "@components/inputs/dual.input";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useForm, SubmitHandler } from "react-hook-form";
-import { useService } from "services/user.service";
+import { useService } from "services/user/user.service";
 import LoadingButton from "@components/buttons/loading.button";
 import SecondaryButton from "@components/buttons/secondary.button";
 import Image from "next/image";
+import { miscService } from "services/user/misc.service";
 
 interface IFormInput {
   first_name: String;
@@ -22,6 +23,7 @@ interface IFormInput {
   password_confirmation: String;
   phone_number: String;
 }
+
 const SignUpPage: NextPage = () => {
   const route = useRouter();
   const { register, handleSubmit, setError, formState } = useForm<IFormInput>();
@@ -49,12 +51,12 @@ const SignUpPage: NextPage = () => {
 
         <div className="flex rounded-lg shadow font-semibold w-11/12 md:w-1/3 lg:w-1/4   mx-auto justify-between">
           <Link href={"/auth/signup"} passHref>
-            <div className="border-y border-green-400 bg-green-100 text-green-400 border-l px-2 py-4 rounded-l-lg text-center w-1/2 cursor-pointer">
+            <div className="border-y border-emerald-400 bg-emerald-100 text-emerald-400 border-l px-2 py-4 rounded-l-lg text-center w-1/2 cursor-pointer">
               Join Learnali
             </div>
           </Link>
           <Link href={"/auth/login"} passHref>
-            <div className="border-y border-l-green-400  border-x px-2 py-4 rounded-r-lg text-center w-1/2 cursor-pointer">
+            <div className="border-y border-l-emerald-400  border-x px-2 py-4 rounded-r-lg text-center w-1/2 cursor-pointer">
               Login
             </div>
           </Link>
@@ -88,6 +90,7 @@ const SignUpPage: NextPage = () => {
           label="Where are you from"
           placeholder="Select"
           required
+          
         />
         <TextInput
           register={register}
@@ -139,13 +142,13 @@ const SignUpPage: NextPage = () => {
       </form>
       <div className="w-full mb-16 md:mb-0 mx-auto md:w-1/2 lg:w-1/3">
       <div className="my-2 text-sm">
-        By creating an account you agree to LearnAli’s <span className="text-green-400">Terms of Service</span>&nbsp;
-and <span className="text-green-400">Privacy Policy</span>
+        By creating an account you agree to LearnAli’s <span className="text-emerald-400">Terms of Service</span>&nbsp;
+and <span className="text-emerald-400">Privacy Policy</span>
         </div>
-        <div className="my-2 text-sm">We are Hiring ⚡️ <span className="text-green-400">Join Us</span></div>
+        <div className="my-2 text-sm">We are Hiring ⚡️ <span className="text-emerald-400">Join Us</span></div>
         
       </div>
-<div className="fixed bottom-0 left-0">
+{/* <div className="fixed bottom-0 left-0">
       <div className="relative w-32 lg:w-64">
         <Image
         alt="Charco-Education"
@@ -155,9 +158,9 @@ and <span className="text-green-400">Privacy Policy</span>
         width={505}
         />
       </div>
-      </div>
+      </div> */}
 
-      <div className="fixed bottom-0 right-0">
+      {/* <div className="fixed bottom-0 right-0">
       <div className="relative w-32 lg:w-64">
         <Image
         alt="Charco-Direction"
@@ -167,7 +170,7 @@ and <span className="text-green-400">Privacy Policy</span>
         width={505}
         />
       </div>
-      </div>
+      </div> */}
     </div>
   );
 };

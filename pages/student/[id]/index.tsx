@@ -23,13 +23,13 @@ const InstructorMoreDetailPage: NextPage = () => {
 
 
                             <div className="my-4 font-medium">
-                                I love creating and building for teams that build with ease and of use. Currently with the growth team at @<span className="text-green-400">DoorDash</span>
+                                I love creating and building for teams that build with ease and of use. Currently with the growth team at @<span className="text-emerald-400">DoorDash</span>
                             </div>
 
                             <div className="  my-4 ">
                                 <div className=" grid gap-4 my-4 grid-cols-1 text-sm">
                                     <div className="flex">
-                                        <div className="h-6 w-6 ring ring-white my-auto rounded-full bg-green-100"></div>
+                                        <div className="h-6 w-6 ring ring-white my-auto rounded-full bg-emerald-100"></div>
                                         <div className=" ml-2 my-auto  w-fit flex">
                                             <div className="text-gray-400 mr-2">Website</div>
                                             <div className="font-semibold">trakit.com</div>
@@ -37,7 +37,7 @@ const InstructorMoreDetailPage: NextPage = () => {
                                     </div>
 
                                     <div className="flex">
-                                        <div className="h-6 w-6 ring ring-white my-auto rounded-full bg-green-100"></div>
+                                        <div className="h-6 w-6 ring ring-white my-auto rounded-full bg-emerald-100"></div>
                                         <div className=" ml-2 my-auto  w-fit flex">
                                             <div className="text-gray-400 mr-2">Twitter</div>
                                             <div className="font-semibold">@trakit</div>
@@ -45,7 +45,7 @@ const InstructorMoreDetailPage: NextPage = () => {
                                     </div>
 
                                     <div className="flex">
-                                        <div className="h-6 w-6 ring ring-white my-auto rounded-full bg-green-100"></div>
+                                        <div className="h-6 w-6 ring ring-white my-auto rounded-full bg-emerald-100"></div>
                                         <div className=" ml-2 my-auto  w-fit flex">
                                             <div className="text-gray-400 mr-2">Linkedin</div>
                                             <div className="font-semibold">/in/trakit</div>
@@ -53,10 +53,10 @@ const InstructorMoreDetailPage: NextPage = () => {
                                     </div>
 
                                     {/* <div className="flex">
-                                        <div className="h-6 w-6 ring ring-white my-auto rounded-full bg-green-100"></div>
+                                        <div className="h-6 w-6 ring ring-white my-auto rounded-full bg-emerald-100"></div>
                                         <div className=" ml-2  w-fit">
                                             <div className="text-gray-400">Courses</div>
-                                            <div className="text-green-400">7 Courses</div>
+                                            <div className="text-emerald-400">7 Courses</div>
                                         </div>
                                     </div> */}
                                 </div>
@@ -68,12 +68,12 @@ const InstructorMoreDetailPage: NextPage = () => {
                                         <div className="font-semibold">My Certificates</div>
                                         <div className="text-sm text-gray-400">Jacob&apos;s Certificate Stash</div>
                                     </div>
-                                    {/* <div className="font-semibold cursor-pointer text-green-400 my-auto">See all</div> */}
+                                    {/* <div className="font-semibold cursor-pointer text-emerald-400 my-auto">See all</div> */}
                                 </div>
 
                                 <div className="my-4 w-full grid grid-cols-1 gap-4 first-letter: md:grid-cols-2 lg:grid-cols-2 ">
-                                    <div className=" h-44 w-full border rounded-md border-gray-400 bg-green-50"></div>
-                                    <div className=" h-44 w-full border rounded-md border-gray-400 bg-green-50"></div>
+                                    <div className=" h-44 w-full border rounded-md border-gray-400 bg-emerald-50"></div>
+                                    <div className=" h-44 w-full border rounded-md border-gray-400 bg-emerald-50"></div>
 
                                 </div>
                             </div>
@@ -85,10 +85,10 @@ const InstructorMoreDetailPage: NextPage = () => {
                     </div>
 
                     <div className="lg:w-1/2 w-full">
-                        <div className="my-0 relative h-44 bg-green-100 rounded-lg p-4">
+                        <div className="my-0 relative h-44 bg-emerald-100 rounded-lg p-4">
                             <div className="flex flex-wrap justify-end w-full gap-4">
-                                <div className="font-semibold bg-white p-2 rounded-full flex text-sm"><div className="h-8 w-8 bg-green-200 rounded-full my-auto mr-2"></div><div className="my-auto">Download as PDF</div></div>
-                                <div className="font-semibold bg-white p-2 rounded-full flex text-sm"><div className="h-8 w-8 bg-green-200 rounded-full my-auto mr-2"></div><div className="my-auto">Share</div></div>
+                                <div className="font-semibold bg-white p-2 rounded-full flex text-sm"><div className="h-8 w-8 bg-emerald-200 rounded-full my-auto mr-2"></div><div className="my-auto">Download as PDF</div></div>
+                                <div className="font-semibold bg-white p-2 rounded-full flex text-sm"><div className="h-8 w-8 bg-emerald-200 rounded-full my-auto mr-2"></div><div className="my-auto">Share</div></div>
                             </div>
                         </div>
 

@@ -76,7 +76,7 @@ const PercentageAchieversCard = (props: {
                 </div>
 
                 <div className="flex flex-row-reverse mt-1">
-                    <div className="text-green-400 text-sm cursor-pointer">See all course</div>
+                    <div className="text-emerald-400 text-sm cursor-pointer">See all course</div>
                 </div>
             </div>
 
