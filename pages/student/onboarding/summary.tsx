@@ -37,13 +37,13 @@ const CareerSummaryPage: NextPage = () => {
 
                     <div className="w-full relative lg:w-2/3 gap-4 lg:h-screen overflow-y-auto space-y-4 lg:space-y-0 snap-y snap-mandatory lg:grid grid-cols-2 no-scrollbar   mx-auto pb-8">
                         {/* card */}
-                    <RecommendedPathCard route={()=>route.push('/course/overview')} active/>
-                    <RecommendedPathCard route={()=>route.push('/course/overview')}/>
-                    <RecommendedPathCard active route={()=>route.push('/course/overview')}/>
-                    <RecommendedPathCard route={()=>route.push('/course/overview')}/>
-                    <RecommendedPathCard route={()=>route.push('/course/overview')}/>
-                    <RecommendedPathCard route={()=>route.push('/course/overview')}/>
-                    <RecommendedPathCard active route={()=>route.push('/course/overview')}/>
+                    <RecommendedPathCard route={()=>route.push('/student/course/overview')} active/>
+                    <RecommendedPathCard route={()=>route.push('/student/course/overview')}/>
+                    <RecommendedPathCard active route={()=>route.push('/student/course/overview')}/>
+                    <RecommendedPathCard route={()=>route.push('/student/course/overview')}/>
+                    <RecommendedPathCard route={()=>route.push('/student/course/overview')}/>
+                    <RecommendedPathCard route={()=>route.push('/student/course/overview')}/>
+                    <RecommendedPathCard active route={()=>route.push('/student/course/overview')}/>
 
                     </div>
 

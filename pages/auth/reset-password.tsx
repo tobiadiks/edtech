@@ -25,7 +25,7 @@ const ResetPasswordPage: NextPage = () => {
   setIsVerified(true)};
 
   const onreset: SubmitHandler<IFormInput> = (data) => {console.log(data);
-    route.push('/dashboard')};
+    route.push('/student/dashboard')};
 
   if (!isVerified) {
     return (

@@ -33,7 +33,7 @@ const SignUpPage: NextPage = () => {
     return useService
       .signup(JSON.stringify(data))
       .then(() => {
-        route.push("/onboarding/assessment");
+        route.push("/student/onboarding/assessment");
       })
       .catch((error) => {
         setError("email", { message: error });

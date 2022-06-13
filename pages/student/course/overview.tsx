@@ -16,7 +16,7 @@ const CareerSummaryPage: NextPage = () => {
             <div className="w-full font-inter min-h-screen lg:mt-16  mt-28 flex flex-col px-4 md:px-4 lg:px-8">
                 <div className="flex flex-col lg:flex-row  w-full mt-4">
                     <div className=" flex flex-col">
-                        <div onClick={()=>route.push('/onboarding/summary')} className="font-semibold text-black w-fit cursor-pointer">
+                        <div onClick={()=>route.push('/student/onboarding/summary')} className="font-semibold text-black w-fit cursor-pointer">
                             Go Back to Recommended Paths
                         </div>
                         <div className="font-semibold text-xs text-gray-400">

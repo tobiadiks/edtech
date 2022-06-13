@@ -32,7 +32,7 @@ const SignInPage: NextPage = () => {
     return useService
       .login(JSON.stringify(data))
       .then(() => {
-        route.push("/dashboard");
+        route.push("/student/dashboard");
       })
       .catch((error) => {
         setError("email", { message: 'error' });

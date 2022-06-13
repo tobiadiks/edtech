@@ -35,7 +35,7 @@ const AssessmentPage: NextPage = () => {
     const { errors } = formState;
     const onsubmit = async (data: any) => {
         console.log(data);
-        route.push('/onboarding/summary')
+        route.push('/student/onboarding/summary')
     };
 
     return (
@@ -136,7 +136,7 @@ const AssessmentPage: NextPage = () => {
                 <div className="px-4 pt-4">
                     <SecondaryButton type={'submit'} title={'Reveal Suggested Path'} />
                 </div>
-                <div onClick={()=>route.push('/dashboard')} className="text-sm cursor-pointer mx-auto w-fit">Skip, I have a Path</div>
+                <div onClick={()=>route.push('/student/dashboard')} className="text-sm cursor-pointer mx-auto w-fit">Skip, I have a Path</div>
             </form>
 
             {/* <div className="w-full mx-auto md:w-1/2 lg:w-1/3">

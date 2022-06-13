@@ -3,7 +3,7 @@ import JobCard from "@components/cards/jobs.cards"
 import HeaderNavigation from "@components/navigations/header.navigation"
 import type { NextPage } from "next"
 
-const InstructorMoreDetailPage: NextPage = () => {
+const StudentDetailPage: NextPage = () => {
     return (
         <>
             <HeaderNavigation />
@@ -128,4 +128,4 @@ const InstructorMoreDetailPage: NextPage = () => {
         </>
     )
 }
-export default InstructorMoreDetailPage
+export default StudentDetailPage

@@ -35,6 +35,18 @@ const signup = async (body: any) => {
     return data;
 }
 
+const refreshToken = async () => {
+    const data = await axios.post(`${baseUrl}/account/refresh-token`,
+        {
+            headers: { 'Content-Type': 'application/json' }
+        }
+    );
+    userSubject.next(data);
+    localStorage.setItem('user', JSON.stringify(data));
+    console.log(data);
+    return data;
+}
+
 
 const logout = async () => {
     localStorage.removeItem('user');
@@ -48,5 +60,6 @@ export const useService = {
     login,
     signup,
     logout,
+    refreshToken
     //signup
 }
