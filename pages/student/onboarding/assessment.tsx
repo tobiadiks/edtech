@@ -6,13 +6,14 @@ import PasswordInput from "@components/inputs/password.input";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useForm, SubmitHandler } from "react-hook-form";
-import { useService } from "services/user/user.service";
+import { userService } from "services/user/user.service";
 import LoadingButton from "@components/buttons/loading.button";
 import * as Yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import SecondaryButton from "@components/buttons/secondary.button";
 import Image from "next/image";
 import CareerPathAssessmentCard from "@components/cards/careerpathassessment.card";
+import AuthGuard from "guards/auth.guard";
 
 // interface IFormInput {
 //     email: String;
@@ -39,6 +40,7 @@ const AssessmentPage: NextPage = () => {
     };
 
     return (
+        <AuthGuard>
         <div className="w-full min-h-screen font-inter flex flex-col my-8 md:my-11 justify-center md:align-middle px-4 md:px-6">
             <div className="w-full">
                 {/* <Link href={"/"} passHref>
@@ -169,6 +171,7 @@ and <span className="text-emerald-400">Privacy Policy</span>
       </div>
       </div> */}
         </div>
+        </AuthGuard>
     );
 };
 

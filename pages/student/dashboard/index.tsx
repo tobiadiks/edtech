@@ -14,6 +14,7 @@ import CareerPathProgressCard from "@components/cards/careerpathprogress.card";
 import LearningChartCard from "@components/cards/learningchart.card";
 import UserCourseCard from "@components/cards/usercoursecard.card";
 import JobCard from "@components/cards/jobs.cards";
+import AuthGuard from "guards/auth.guard";
 
 
 //user dashboard
@@ -21,7 +22,7 @@ const DashBoardPage: NextPage = () => {
   const [statVisible, setStatVisible] = React.useState(true)
 
   return (
-    <>
+    <AuthGuard>
       <HeaderNavigation />
       <div className="w-full font-inter min-h-screen mt-28 lg:mt-16 flex flex-col px-4 md:px-4 lg:px-8">
         {/* <div className="flex flex-col  w-full mt-4"> */}
@@ -143,7 +144,7 @@ const DashBoardPage: NextPage = () => {
         </div>
 
       </div>
-    </>
+    </AuthGuard>
   );
 };
 

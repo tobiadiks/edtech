@@ -8,7 +8,7 @@ import DualInput from "@components/inputs/dual.input";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useForm, SubmitHandler } from "react-hook-form";
-import { useService } from "services/user/user.service";
+import { userService } from "services/user/user.service";
 import LoadingButton from "@components/buttons/loading.button";
 import SecondaryButton from "@components/buttons/secondary.button";
 import Image from "next/image";
@@ -30,7 +30,7 @@ const SignUpPage: NextPage = () => {
   const onsubmit: SubmitHandler<IFormInput> = (data) => {
     console.log(data);
 
-    return useService
+    return userService
       .signup(JSON.stringify(data))
       .then(() => {
         route.push("/student/onboarding/assessment");

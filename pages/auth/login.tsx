@@ -6,7 +6,7 @@ import PasswordInput from "@components/inputs/password.input";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useForm, SubmitHandler } from "react-hook-form";
-import { useService } from "services/user/user.service";
+import { userService } from "services/user/user.service";
 import LoadingButton from "@components/buttons/loading.button";
 import * as Yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
@@ -29,7 +29,7 @@ const SignInPage: NextPage = () => {
   const onsubmit = (data: any) => {
     console.log(data);
 
-    return useService
+    return userService
       .login(JSON.stringify(data))
       .then(() => {
         route.push("/student/dashboard");

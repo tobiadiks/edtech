@@ -1,5 +1,6 @@
 import VideoController from "@components/controls/video";
 import HeaderNavigation from "@components/navigations/header.navigation";
+import AuthGuard from "guards/auth.guard";
 import React from "react";
 import { useRef, useState } from "react";
 import ReactPlayer from "react-player";
@@ -41,7 +42,7 @@ const VideoCourse = () => {
     }
 
     return (
-        <>
+        <AuthGuard>
             <HeaderNavigation />
             <div className="w-full font-inter min-h-screen  lg:mt-16 mt-28 flex flex-col px-4 md:px-4 lg:px-8">
                 <div className="flex flex-col mt-4 lg:flex-row">
@@ -235,7 +236,7 @@ const VideoCourse = () => {
                     </div>
                 </div>
             </div>
-        </>
+        </AuthGuard>
     )
 }
 

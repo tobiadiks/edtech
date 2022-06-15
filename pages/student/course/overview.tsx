@@ -5,13 +5,14 @@ import CourseCard from "@components/cards/courses.card";
 import HeaderNavigation from "@components/navigations/header.navigation";
 import SecondaryButton from "@components/buttons/secondary.button";
 import { useRouter } from "next/router";
+import AuthGuard from "guards/auth.guard";
 
 //onboard the user to pick a career
 const CareerSummaryPage: NextPage = () => {
     const route=useRouter();
     
     return (
-        <>
+        <AuthGuard>
             <HeaderNavigation />
             <div className="w-full font-inter min-h-screen lg:mt-16  mt-28 flex flex-col px-4 md:px-4 lg:px-8">
                 <div className="flex flex-col lg:flex-row  w-full mt-4">
@@ -281,7 +282,7 @@ const CareerSummaryPage: NextPage = () => {
 
                 </div>
             </div>
-        </>
+        </AuthGuard>
     );
 };
 

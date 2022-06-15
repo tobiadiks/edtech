@@ -54,7 +54,7 @@ const logout = async () => {
     Router.push('/auth/login')
 }
 
-export const useService = {
+export const userService = {
     user: userSubject.asObservable(),
     get userValue() { return userSubject.value },
     login,
