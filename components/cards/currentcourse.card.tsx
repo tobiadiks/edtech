@@ -1,4 +1,5 @@
 import { HtmlProps } from "next/dist/shared/lib/utils";
+import { useRouter } from "next/router";
 import * as React from "react";
 
 const CurrentCourseCard = (props: {
@@ -6,6 +7,7 @@ const CurrentCourseCard = (props: {
     onclick?: any;
     started?: boolean;
 }) => {
+    const route= useRouter()
     return (
         <div>
             <div className="bg-gray-100 rounded-xl font-inter  flex flex-col justify-between p-2 mx-0 md:mx-1 my-1">
@@ -22,7 +24,7 @@ const CurrentCourseCard = (props: {
                 </div>
             </div>
             <div className=" p-2">
-                <div className=" text-sm">{props.title}</div>
+                <div onClick={()=>route.push('/student/learn/v/123')} className="cursor-pointer text-sm">{props.title}</div>
             </div>
         </div>
     );

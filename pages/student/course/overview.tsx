@@ -265,7 +265,7 @@ const CareerSummaryPage: NextPage = () => {
                                             12wks&nbsp;<span className="text-gray-400">Feb - April 2022</span>
                                         </div>
                                     </div>
-                                    <div className="ml-2 w-1/2 lg:w-8/12"><PrimaryButton title="Enroll for Free"/></div>
+                                    <div className="ml-2 w-1/2 lg:w-8/12"><PrimaryButton onclick={()=>route.push('/student/dashboard')} title="Enroll for Free"/></div>
                                 </div>
                             </div>
                         </div>

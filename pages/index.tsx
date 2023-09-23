@@ -12,12 +12,12 @@ const HomePage: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="mx-auto text-center">
+      <main className="mx-auto text-center mt-8">
         <h1 className="">Welcome</h1>
 
         <Link href={"/auth/login"} passHref>
-          <p className="cursor-pointer hover:bg-slate-700">
-            Get started
+          <p className="cursor-pointer mt-8 bg-black p-4 rounded-md text-white font-bold hover:bg-slate-700">
+            Continue your journey
           </p>
         </Link>
       </main>

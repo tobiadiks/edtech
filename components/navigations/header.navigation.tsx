@@ -1,8 +1,10 @@
 import type { NextPage } from "next";
 import Link from "next/link";
 import cn from 'classnames'
+import { useRouter } from "next/router";
 
 const HeaderNavigation: NextPage = () => {
+  const route= useRouter()
   return (
     <div className="w-full z-50 font-inter fixed bg-white top-0">
       <div className="border px-4 md:px-4 lg:px-8 grid lg:grid-cols-4 grid-cols-3">
@@ -26,7 +28,7 @@ const HeaderNavigation: NextPage = () => {
           <div className="h-12 w-12 mr-2 bg-gray-300 my-auto rounded-full md:mr-2"></div>
           <div className="my-auto">
             <div className="text-xs text-gray-400">You are logged in as</div>
-          <div className="cursor-pointer text-sm font-semibold my-auto ">
+          <div onClick={()=>route.push('/student/122')} className="cursor-pointer text-sm font-semibold my-auto ">
             Tamoru Dara
           </div>
           </div>

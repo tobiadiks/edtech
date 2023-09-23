@@ -29,15 +29,15 @@ const SignUpPage: NextPage = () => {
   const { register, handleSubmit, setError, formState } = useForm<IFormInput>();
   const onsubmit: SubmitHandler<IFormInput> = (data) => {
     console.log(data);
-
-    return userService
-      .signup(JSON.stringify(data))
-      .then(() => {
-        route.push("/student/onboarding/assessment");
-      })
-      .catch((error) => {
-        setError("email", { message: error });
-      });
+setTimeout(()=>route.push("/student/onboarding/assessment"),2000)
+    // return userService
+    //   .signup(JSON.stringify(data))
+    //   .then(() => {
+    //     route.push("/student/onboarding/assessment");
+    //   })
+    //   .catch((error) => {
+    //     setError("email", { message: error });
+    //   });
   };
 
   return (

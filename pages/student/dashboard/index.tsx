@@ -15,12 +15,13 @@ import LearningChartCard from "@components/cards/learningchart.card";
 import UserCourseCard from "@components/cards/usercoursecard.card";
 import JobCard from "@components/cards/jobs.cards";
 import AuthGuard from "guards/auth.guard";
+import { useRouter } from "next/router";
 
 
 //user dashboard
 const DashBoardPage: NextPage = () => {
   const [statVisible, setStatVisible] = React.useState(true)
-
+const route=useRouter()
   return (
     <AuthGuard>
       <HeaderNavigation />
@@ -69,7 +70,7 @@ const DashBoardPage: NextPage = () => {
 
           <div className="w-full flex justify-between">
             <div className="font-semibold">Your Courses</div>
-            <div className="cursor-pointer font-bold text-emerald-400 text-sm">Find More Courses</div>
+            <div onClick={()=>route.push('/user/course')} className="cursor-pointer font-bold text-emerald-400 text-sm">Find More Courses</div>
           </div>
           <div className=" text-xs text-gray-400">
             This are courses you are currently taking based on your path

@@ -55,7 +55,7 @@ const RecommendedPathCard = (props: {
                     <div className="text-emerald-400">62 Hours</div>
                 </div>
             </div> :
-                <SecondaryButton title="Join this Career Path" />
+                <SecondaryButton onclick={props.route} title="Join this Career Path" />
             }
         </div>
     )

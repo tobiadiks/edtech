@@ -1,6 +1,7 @@
 import VideoController from "@components/controls/video";
 import HeaderNavigation from "@components/navigations/header.navigation";
 import AuthGuard from "guards/auth.guard";
+import { useRouter } from "next/router";
 import React from "react";
 import { useRef, useState } from "react";
 import ReactPlayer from "react-player";
@@ -12,7 +13,7 @@ const VideoCourse = () => {
     const [timeLeft, setTimeLeft] = useState<number>(0);
     const [currentVolume, setCurrentVolume] = useState<number>(0.5)
     const [currentVolumeBar, setCurrentVolumeBar] = useState<number>(50)
-
+const route=useRouter()
     const hostVideo = React.createRef<any>()
     const handlePlay = () => {
         if (totalDurationOfVideo == 0) {
@@ -50,7 +51,7 @@ const VideoCourse = () => {
                     {console.log(currentSeek)}
                     <div className="lg:w-3/5 w-full lg:border-r">
                         <div>
-                            <div className="w-fit text-sm text-gray-400">Go Back To Dashboard</div>
+                            <div onClick={()=>route.back()} className="w-fit text-sm text-gray-400">Go Back To Dashboard</div>
                             <div className=" w-full flex text-lg lg:text-2xl font-bold my-4"><div className="w-4/5">Applying Heuristic Evaluations In Your Next Design Project</div>
                                 <div className="flex self-end h-fit"><div className="h-4 w-4 bg-white rounded-full ring-2 ring-emerald-400"></div><div className="text-xs ml-2 my-auto">81% Done</div></div>
                             </div>
@@ -76,7 +77,7 @@ const VideoCourse = () => {
                                     <div className="h-8 w-8 rounded-full bg-gray-100"></div>
                                     <div className="my-auto ml-2">
                                         <div className="text-gray-400 text-xs">Instructor</div>
-                                        <div className="text-sm">Mrs. Theresa Dardnia</div>
+                                        <div  onClick={()=>route.push('/instructor/123')} className="text-sm cursor-pointer">Mrs. Theresa Dardnia</div>
                                     </div>
                                 </div>
 

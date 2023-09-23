@@ -136,7 +136,7 @@ const AssessmentPage: NextPage = () => {
                 </div>
 
                 <div className="px-4 pt-4">
-                    <SecondaryButton type={'submit'} title={'Reveal Suggested Path'} />
+                    <SecondaryButton type={'button'} onclick={()=>route.push('/student/onboarding/summary')} title={'Reveal Suggested Path'} />
                 </div>
                 <div onClick={()=>route.push('/student/dashboard')} className="text-sm cursor-pointer mx-auto w-fit">Skip, I have a Path</div>
             </form>

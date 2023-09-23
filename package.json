@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@hookform/resolvers": "^2.8.8",
+    "@next/swc-linux-x64-gnu": "^13.5.2",
     "@nivo/core": "^0.78.0",
     "@nivo/line": "^0.78.0",
     "@nivo/pie": "^0.78.0",

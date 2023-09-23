@@ -28,15 +28,15 @@ const SignInPage: NextPage = () => {
   const { errors } = formState;
   const onsubmit = (data: any) => {
     console.log(data);
-
-    return userService
-      .login(JSON.stringify(data))
-      .then(() => {
-        route.push("/student/dashboard");
-      })
-      .catch((error) => {
-        setError("email", { message: 'error' });
-      });
+setTimeout(()=>route.push("/student/onboarding/assessment"),2000)
+    // return userService
+    //   .login(JSON.stringify(data))
+    //   .then(() => {
+    //     route.push("/student/dashboard");
+    //   })
+    //   .catch((error) => {
+    //     setError("email", { message: 'error' });
+    //   });
   };
 
   return (
